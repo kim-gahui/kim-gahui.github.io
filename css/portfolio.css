@@ -1,0 +1,64 @@
+@charset "UTF-8";
+header{height: 100vh; position: relative; background: #ffeee1;}
+header .title{font-family: 'Open Sans', sans-serif;position: absolute; top: 30%; left: 50%; transform: translatex(-50%); font-size: 10em; }
+.scroll{position: absolute;bottom: 0;left: 50%;transform: translatex(-50%);}
+.scroll a{position: relative;display: block;width: 100px;height: 90px;font-size: 14px;text-align: center; }
+.scroll a::after{position: absolute;display: block; content:''; width: 1px; height: 60px; bottom: 0; left: 50%; background: #232323; animation: move 1s alternate infinite;}
+.scroll a:hover::after{animation-play-state: paused;}
+@keyframes move {
+  0%{height: 60px;}
+  100%{height: 30px;}
+}
+article{position: relative;}
+article h1{font-size: 3em; padding-top: 20px; padding-bottom: 15px;box-sizing: border-box; font-weight: 800; font-style: italic;}
+.wrap{position: relative; overflow: hidden; padding: 20px; padding-left: 230px;height: 100vh;box-sizing: border-box;}
+#about nav{position: absolute; width: 230px; top: 60%; left: 0; z-index: 3;}
+#about nav.fixed{position: fixed;}
+#about nav ul{overflow: hidden; width: 230px;}
+#about nav ul li{height: 50px; line-height: 50px;}
+#about nav ul li a{display: block; position: relative; transition: all .5s; padding-left: 35px; box-sizing: border-box; color: #11080a; text-transform: uppercase; letter-spacing: 1px;}
+#about nav ul li a::after{position: absolute; display: block;content: ''; height: 0.5px; width: 30px; top: 50%; left: 0; background: #11080a; transition: 0.5s;}
+#about nav ul li a:hover, #about nav ul li a.active{padding-left: 90px; font-weight: 700; color: #11080A;}
+#about nav ul li a:hover::after, #about nav ul li a.active::after{width: 85px; background: #d4a89d;}
+#about nav.color ul li a:hover::after, #about nav.color ul li a.active::after{background: #fff;}
+#about .wrap{overflow: auto; height: initial;}
+#about .wrap > div{width: 50%;}
+#about .resume{float: left; padding: 20px; box-sizing: border-box; left: 230px; top: 20px; opacity: 0; transition: opacity 0.5s;}
+section.stuck #about .resume{position: fixed; width: 42.5%; opacity: 1;}
+#about .skills{margin-left: 50%; background: #e8c7ad;}
+#about .skills h1{padding: 40px 20px 20px 20px; box-sizing: border-box;}
+#about .skills .skill-box{text-align: center;padding: 40px 20px;}
+.skill-box .img-box{width: 80px; height: 80px; margin: auto;}
+.skill-box:nth-of-type(1) .img-box{width: 200px;}
+.skill-box:nth-of-type(1) .img-box img{width: 80px; }
+.skill-box .img-box img{width: 100%;}
+.skill-box h2{color: #ffeee1; font-style: italic; padding: 15px 0;}
+.skill-box p{padding: 10px 50px 20px; font-weight: 700;}
+
+#portfolio .grid{overflow: hidden; padding-top: 20px;}
+#portfolio .grid .item{width: 33.33%;float: left; padding: 0 30px 30px 0; box-sizing: border-box;}
+#portfolio .btn-group{position: absolute; top: 73px; left: 500px;}
+#portfolio button{width: 100px; font-size: 14px; line-height: 30px; border: 1px solid #d4a89d; border-radius: 3px;}
+#portfolio button.on{background: #E2B698; color: #fff; border: 1px solid #E2B698; }
+#portfolio a{position: relative; display: block;}
+#portfolio a:hover .txt-wrap{opacity: 1;}
+#portfolio a:hover img{transform: scale(1.1);}
+#portfolio a .img-wrap{overflow: hidden; width: 521px; height: 348px; border-radius: 20px; box-shadow: 3px 3px 5px #ccc; border: 1px solid #e8e8e8; box-sizing: border-box;}
+#portfolio img{width: 100%; vertical-align: top; transition: all .5s;}
+#portfolio a .txt-wrap{position: absolute; top: 0; left: 0; width: 100%; height: 348px; border-radius: 20px; background: rgba(0,0,0,0.5); opacity: 0;}
+#portfolio a .txt-wrap p{font-size: 25px; position: absolute; top: 50%; transform: translateY(-50%); width: 100%; text-align: center;z-index: 1; color: #fff;}
+
+#contact{text-align: center; background: #E2B698;}
+#contact .contact-box{overflow: hidden;}
+#contact .contact-box .left{width: 50%; float: left; }
+#contact .contact-box .left span{display: block; font-size: 4em; font-family: 'Racing Sans One', sans-serif; font-weight: bold; padding : 250px 0;}
+#contact .contact-box .right{width: 50%; margin-left: 50%; padding: 80px 20px; box-sizing: border-box;}
+#contact .contact-box .right form{width: 500px; margin: auto; text-align: left;}
+#contact .contact-box .right input{width: 100%; height: 65px; padding: 18px 25px; font-size: 14px; box-sizing: border-box; border: 1px solid transparent; margin-bottom: 15px;}
+#contact .contact-box .right input.focus, #contact .contact-box .right textarea.focus{border: 1px solid #11080A; }
+#contact .contact-box .right textarea{width: 100%; height: 300px; font-size: 14px; padding: 18px 25px; box-sizing: border-box; border: 1px solid transparent;margin-bottom: 20px; }
+#contact .contact-box .right button{width: 105px; height: 45px; border: 1px solid #11080A; color: #11080A; transition: .5s; font-weight: 700;}
+#contact .contact-box .right button:hover{background: #11080A; border: 1px solid #11080A; color: #fff;}
+#contact small{display: block;text-align: left; padding-top: 10px ; box-sizing: border-box;}
+
+#goTop{display: none; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%;); margin-left: -25px; width: 50px; height: 50px; border-radius: 50%; background: #232323; color: #fff; }

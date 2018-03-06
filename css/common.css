@@ -1,0 +1,8 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One|Nanum+Gothic:400,700,800|Open+Sans:400,700,800,800i');
+*{margin: 0; padding: 0;}
+body{font-family: 'Nanum Gothic', sans-serif; color: #232323;}
+li{list-style: none;}
+a{text-decoration: none; color: #242424;}
+button{border: 0; background: none; cursor: pointer;}
+.skip{position: absolute; display: none; text-indent: -9999px; left: -9999px;}
