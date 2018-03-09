@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>웹 퍼블리셔 포트폴리오 - 김가희</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/isotope-docs.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/portfolio.css">
   </head>
@@ -16,68 +19,81 @@
         <a href="#about">Keep scrolling</a>
       </div>
     </header>
+    <div class="gnb-nav">
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn-toggle"><i class="fas fa-bars"></i><span class="skip">토글메뉴</span></button>
+    </div>
     <section>
       <article id="about">
-        <nav>
-          <ul>
-            <li><a href="#home" class="active">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#portfolio">portfolio</a></li>
-            <li><a href="#contact">contact</a></li>
-          </ul>
-        </nav>
-        <div class="wrap">
-          <div class="resume">
-            <div class="txt-wrap">
-              <h1>About</h1>
-              <p>좌우명, 나를 대표하는 키워드</p>
-              <p>웹디자이너/퍼블리셔가 되려는 이유</p>
-              <p>웹디자이너/퍼블리셔가 되기 위한 노력 및 포부</p>
-              <p>교육과정, 경력사항, 자격증</p>
-            </div>
+        <div class="resume">
+          <h1>About</h1>
+          <div class="txt-wrap">
+            <p>좌우명, 나를 대표하는 키워드</p>
+            <p>웹디자이너/퍼블리셔가 되려는 이유</p>
+            <p>웹디자이너/퍼블리셔가 되기 위한 노력 및 포부</p>
+            <p>교육과정, 경력사항, 자격증</p>
           </div>
-          <div class="skills">
-            <h1>Skills</h1>
-            <div class="skill-box">
-              <div class="img-box">
-                <img src="image/ps_logo.png" alt="photoshop logo">
-                <img src="image/ai_logo.png" alt="illustrator logo">
-              </div>
+        </div>
+        <div class="skills">
+          <h1>Skills</h1>
+          <div class="skill-box">
+            <div class="img-box">
+              <img src="image/ps_logo.png" alt="photoshop logo">
+              <img src="image/ai_logo.png" alt="illustrator logo">
+            </div>
+            <div class="txt-box">
               <h2>Photoshop, Illustrator</h2>
               <p>웹디자인, UI/UX디자인, 아이콘, 로고디자인, <br>편집디자인 및 그래픽디자인</p>
             </div>
-            <div class="skill-box">
-              <div class="img-box">
-                <img src="image/html5_logo.png" alt="html5_logo">
-              </div>
+          </div>
+          <div class="skill-box">
+            <div class="img-box">
+              <img src="image/html5_logo.png" alt="html5_logo">
+            </div>
+            <div class="txt-box">
               <h2>Html</h2>
               <p>html5 웹표준 및 웹접근성에 따른 마크업 수행</p>
             </div>
-            <div class="skill-box">
-              <div class="img-box">
-                <img src="image/css_logo.png" alt="css logo">
-              </div>
+          </div>
+          <div class="skill-box">
+            <div class="img-box">
+              <img src="image/css_logo.png" alt="css logo">
+            </div>
+            <div class="txt-box">
               <h2>Css</h2>
               <p>css3, 레이아웃, 미디어쿼리를 이용한 반응형 웹디자인</p>
             </div>
-            <div class="skill-box">
-              <div class="img-box">
-                <img src="image/js_logo.png" alt="js logo">
-              </div>
+          </div>
+          <div class="skill-box">
+            <div class="img-box">
+              <img src="image/js_logo.png" alt="js logo">
+            </div>
+            <div class="txt-box">
               <h2>Javascript</h2>
               <p>기본문법 및 jQuery를 사용한 동적 처리, <br>플러그인을 사용한 다양한 효과 및 기능 처리</p>
             </div>
-            <div class="skill-box">
-              <div class="img-box">
-                <img src="image/bootstrap_logo.png" alt="bootstrap logo">
-              </div>
-              <h2>Bootstrap</h2>
-              <p>부트스트랩 프레임 워크 사용 가능 <br>- 템플릿을 변형한 사이트 리뉴얼</p>
+          </div>
+          <div class="skill-box">
+            <div class="img-box">
+              <img src="image/bootstrap_logo.png" alt="bootstrap logo">
             </div>
-            <div class="skill-box">
-              <div class="img-box">
-                <img src="image/github_logo.png" alt="github_logo">
-              </div>
+            <div class="txt-box">
+              <h2>Bootstrap</h2>
+              <p>부트스트랩 프레임 워크 사용 가능 (템플릿을 변형한 사이트 리뉴얼)</p>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="img-box">
+              <img src="image/github_logo.png" alt="github_logo">
+            </div>
+            <div class="txt-box">
               <h2>github</h2>
               <p>작업한 프로젝트의 연동 가능</p>
             </div>
@@ -85,105 +101,147 @@
         </div>
       </article>
       <article id="portfolio">
-        <div class="wrap">
-          <h1>Portfolio</h1>
-          <div class="btn-group">
-            <button class="btn on" data-filter="*">All</button>
-            <button class="btn" data-filter=".desktop">Desktop</button>
-            <button class="btn" data-filter=".responsive">Responsive</button>
-            <button class="btn" data-filter=".bootstrap">Bootstrap</button>
+        <h1>portfolio</h1>
+        <!-- 개별 포트폴리오 부분 -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="seoulJazzFestival">
+                <img src="image/sub1.png" alt="Seoul Jazz Festival 2018">
+                <div class="sub-txt-wrap">
+                  <h2>Seoul Jazz Festival 2018 원페이지</h2>
+                  <div class="link-group">
+                    <a href="#" role="button">Demo</a>
+                    <a href="#" role="button">View Code</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <div>
+                    <p>원 페이지 형식을 이용하여 페스티벌 정보를 간편하게 알 수 있도록 프로모션 사이트를 제작하였습니다. <br>스타일에 그리드 시스템을 적용하여 페이지 배분이 용이하도록 구성하였습니다. </p>
+                    <p><span>TYPE</span> 반응형</p>
+                    <p><span>제작 기간</span> 3일</p>
+                    <div class="category">
+                      <span>CATEGORY</span>
+                      <ul>
+                        <li><a href="#">HTML5</a></li>
+                        <li><a href="#">CSS3</a></li>
+                        <li><a href="#">JS/ JQUERY</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="craft999">
+              <img src="image/sub2.png" alt="craft999">
+              <div class="sub-txt-wrap">
+                <h2>Craft999 반응형 인덱스</h2>
+                <div class="link-group">
+                  <a href="#" role="button">Demo</a>
+                  <a href="#" role="button">View Code</a>
+                </div>
+              </div>
+              <div class="info">
+                <div>
+                  <p>아카데미의 개인 프로젝트로 기획 및 디자인, 퍼블리싱 작업을 진행하였습니다.<br>구글맵을 함수에 적용하여 매장 리스트 선택 시 마커 및 위치가 이동, 해당 마커를 클릭하면 상세 정보를 확인할 수 있는 기능 구현에 중점을 두었습니다.</p>
+                  <p><span>TYPE</span> 반응형</p>
+                  <p><span>제작 기간</span> 2일</p>
+                  <div class="category">
+                    <span>CATEGORY</span>
+                    <ul>
+                      <li><a href="#">HTML5</a></li>
+                      <li><a href="#">CSS3</a></li>
+                      <li><a href="#">JS/ JQUERY</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" id="tourdemonde">
+              <img src="image/sub4.png" alt="tourdemonde">
+              <div class="sub-txt-wrap">
+                <h2>Tourdemonde 인덱스 페이지</h2>
+                <div class="link-group">
+                  <a href="#" role="button">Demo</a>
+                  <a href="#" role="button">View Code</a>
+                  <a href="www.tourdemonde.com/" role="button">기존사이트</a>
+                </div>
+              </div>
+              <div class="info">
+                <div>
+                  <p>월간지 인덱스 페이지를 리뉴얼 하였습니다. 기존에 테이블로 구성하였던 마크업 구조를 수정하고, <br>각 컨텐츠를 간편하게 확인 할 수 있는 구조로 퍼블리싱하였습니다.</p>
+                  <p><span>TYPE</span> 데스크탑</p>
+                  <p><span>제작 기간</span> 1일</p>
+                  <div class="category">
+                    <span>CATEGORY</span>
+                    <ul>
+                      <li><a href="#">HTML5</a></li>
+                      <li><a href="#">CSS3</a></li>
+                      <li><a href="#">JS/ JQUERY</a></li>
+                      <li><a href="#">SWIPER</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" id="blueBottleCoffee">
+              <img src="image/sub5.png" alt="blueBottleCoffee">
+              <div class="sub-txt-wrap">
+                <h2>Blue Bottle Coffee 반응형 인덱스</h2>
+                <div class="link-group">
+                  <a href="#" role="button">Demo</a>
+                  <a href="#" role="button">View Code</a>
+                </div>
+              </div>
+              <div class="info">
+                <div>
+                  <p>블루 보틀 커피 랜딩 페이지를 제작하였습니다. </p>
+                  <p><span>TYPE</span> 반응형</p>
+                  <p><span>제작 기간</span> 3일</p>
+                  <div class="category">
+                    <span>CATEGORY</span>
+                    <ul>
+                      <li><a href="#">HTML5</a></li>
+                      <li><a href="#">CSS3</a></li>
+                      <li><a href="#">JS/ JQUERY</a></li>
+                      <li><a href="#">SWIPER</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="grid">
-            <div class="item responsive">
-              <a href="sub.html#seoulJazzFestival">
-                <div class="img-wrap">
-                  <img src="image/img1.jpg" alt="seoul jazz festival 2018 thumbnail">
-                </div>
-                <div class="txt-wrap">
-                  <p>[반응형] 서울 재즈 페스티벌 2018</p>
-                </div>
-              </a>
-            </div>
-            <div class="item responsive">
-              <a href="sub.html#craft999">
-                <div class="img-wrap">
-                  <img src="image/img2.jpg" alt="craft999 thumbnail">
-                </div>
-                <div class="txt-wrap">
-                  <p>[반응형] CRAFT999</p>
-                </div>
-              </a>
-            </div>
-            <div class="item bootstrap responsive">
-              <a href="sub.html#bootstrapTemplate">
-                <div class="img-wrap">
-                  <img src="image/img3.jpg" alt="bootstrap-template thumbnail">
-                </div>
-                <div class="txt-wrap">
-                  <p>[부트스트랩] 템플릿 활용 브랜드 리뉴얼</p>
-                </div>
-              </a>
-            </div>
-            <div class="item desktop">
-              <a href="sub.html#tourdemonde">
-                <div class="img-wrap">
-                  <img src="image/img4.jpg" alt="tourdemonde thumbnail">
-                </div>
-                <div class="txt-wrap">
-                  <p>[데스크탑] 뚜르드몽드 리뉴얼</p>
-                </div>
-              </a>
-            </div>
-            <div class="item responsive">
-              <a href="sub.html#blueBottleCoffee">
-                <div class="img-wrap">
-                  <img src="image/img5.jpg" alt="blue bottle coffee thumbnail">
-                </div>
-                <div class="txt-wrap">
-                  <p>[반응형] 블루 보틀 커피</p>
-                </div>
-              </a>
-            </div>
-            <div class="item bootstrap">
-              <a href="sub.html#bootstrapComponent">
-                <div class="img-wrap">
-                  <img src="image/img6.jpg" alt="bootstrap-component thumbnail">
-                </div>
-                <div class="txt-wrap">
-                  <p>[부트스트랩] 컴포넌트 모음</p>
-                </div>
-              </a>
-            </div>
-          </div>
+          <div class="swiper-button-next"><i class="fas fa-chevron-right"></i><span class="skip">다음</span></div>
+          <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i><span class="skip">이전</span></div>
         </div>
       </article>
       <article id="contact">
-        <div class="wrap">
-          <h1>Contact</h1>
-          <div class="contact-box">
-            <div class="left">
-              <span>gahee4@gmail.com</span>
-            </div>
-            <div class="right">
-              <form action="#">
-                <div>
-                  <input type="text" placeholder="YOUR COMPANY">
-                </div>
-                <div>
-                  <input type="text" placeholder="YOUR NAME">
-                </div>
-                <div>
-                  <input type="text" placeholder="YOUR EMAIL">
-                </div>
-                <div>
-                  <textarea name="name" rows="8" cols="80" placeholder="YOUR MESSAGE"></textarea>
-                </div>
-                <button>SUBMIT</button>
-              </form>
-            </div>
+        <h1>Contact</h1>
+        <div class="contact-box">
+          <div class="left">
+            <span>gahee4@gmail.com</span>
           </div>
-          <small>copyright &copy; 김가희 All right reserved.</small>
+          <div class="right">
+            <form action="#">
+              <div>
+                <label for="company"><i class="fas fa-building"></i></label>
+                <input type="text" placeholder="YOUR COMPANY" id="company">
+              </div>
+              <div>
+                <label for="name"><i class="fas fa-user"></i></label>
+                <input type="text" placeholder="YOUR NAME" id="name">
+              </div>
+              <div>
+                <label for="email"><i class="fas fa-envelope"></i></label>
+                <input type="text" placeholder="YOUR EMAIL" id="email">
+              </div>
+              <div>
+                <label for="message"><i class="fas fa-comments"></i></label>
+                <textarea name="name" rows="8" cols="80" placeholder="YOUR MESSAGE" id="message"></textarea>
+              </div>
+              <button>SUBMIT</button>
+            </form>
+          </div>
         </div>
+        <small>copyright &copy; 김가희 All right reserved.</small>
       </article>
     </section>
   </body>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-header{height: 100vh; position: relative; background: #ffeee1;}
+header{height: 100vh; position: relative;}
 header .title{font-family: 'Open Sans', sans-serif;position: absolute; top: 30%; left: 50%; transform: translatex(-50%); font-size: 10em; }
 .scroll{position: absolute;bottom: 0;left: 50%;transform: translatex(-50%);}
 .scroll a{position: relative;display: block;width: 100px;height: 90px;font-size: 14px;text-align: center; }
@@ -9,56 +9,60 @@ header .title{font-family: 'Open Sans', sans-serif;position: absolute; top: 30%;
   0%{height: 60px;}
   100%{height: 30px;}
 }
-article{position: relative;}
-article h1{font-size: 3em; padding-top: 20px; padding-bottom: 15px;box-sizing: border-box; font-weight: 800; font-style: italic;}
-.wrap{position: relative; overflow: hidden; padding: 20px; padding-left: 230px;height: 100vh;box-sizing: border-box;}
-#about nav{position: absolute; width: 230px; top: 60%; left: 0; z-index: 3;}
-#about nav.fixed{position: fixed;}
-#about nav ul{overflow: hidden; width: 230px;}
-#about nav ul li{height: 50px; line-height: 50px;}
-#about nav ul li a{display: block; position: relative; transition: all .5s; padding-left: 35px; box-sizing: border-box; color: #11080a; text-transform: uppercase; letter-spacing: 1px;}
-#about nav ul li a::after{position: absolute; display: block;content: ''; height: 0.5px; width: 30px; top: 50%; left: 0; background: #11080a; transition: 0.5s;}
-#about nav ul li a:hover, #about nav ul li a.active{padding-left: 90px; font-weight: 700; color: #11080A;}
-#about nav ul li a:hover::after, #about nav ul li a.active::after{width: 85px; background: #d4a89d;}
-#about nav.color ul li a:hover::after, #about nav.color ul li a.active::after{background: #fff;}
-#about .wrap{overflow: auto; height: initial;}
-#about .wrap > div{width: 50%;}
-#about .resume{float: left; padding: 20px; box-sizing: border-box; left: 230px; top: 20px; opacity: 0; transition: opacity 0.5s;}
-section.stuck #about .resume{position: fixed; width: 42.5%; opacity: 1;}
-#about .skills{margin-left: 50%; background: #e8c7ad;}
-#about .skills h1{padding: 40px 20px 20px 20px; box-sizing: border-box;}
-#about .skills .skill-box{text-align: center;padding: 40px 20px;}
-.skill-box .img-box{width: 80px; height: 80px; margin: auto;}
-.skill-box:nth-of-type(1) .img-box{width: 200px;}
-.skill-box:nth-of-type(1) .img-box img{width: 80px; }
+article{position: relative; height: 100vh; overflow: hidden;}
+article h1{font-size: 3em; padding: 45px 0 0 100px;  box-sizing: border-box; font-weight: 800; font-style: italic; text-align: left;}
+.gnb-nav{display: none; position: fixed;top: 0;left: 0;z-index: 3;width: 100%;}
+.gnb-nav .btn-toggle{width: 40px;height: 40px;font-size: 30px;position: absolute;bottom: -40px;left: 50%;padding: 5px;background: rgba(0, 0, 0, 0.5); color: #fff; transform: translateX(-50%);}
+nav{display: none; background: rgba(0, 0, 0, 0.5);}
+nav ul{width: 441px; margin: auto; overflow: hidden;}
+nav ul li{float: left;padding: 0 19px;text-align: center;font-size: 16px; line-height: 45px; font-size: 16px; text-transform: uppercase;}
+nav ul li a{color: #fff; letter-spacing: 1px;}
+nav ul li:hover{background: rgba(255,255,255,0.5); font-weight: bold;}
+nav ul li:hover a{color: #000;}
+
+#about h1{padding: 0 0 30px 0;}
+#about > div{width: 50%; height: 100vh; padding: 30px ; box-sizing: border-box;}
+#about > div > div{padding-left: 80px; box-sizing: border-box;}
+#about .resume{float: left; }
+#about .skills{margin-left: 50%; background: #232323; color: #fff;}
+#about .skills .skill-box{margin: 30px 0; overflow: hidden; }
+#about .skills .skill-box .txt-box{padding-left: 30px; display: inline-block; margin-top: 5px;}
+#about .skills .skill-box:nth-of-type(1) .txt-box{margin-top: 35px; }
+.skill-box .img-box{width: 80px; float: left; padding-right: 30px;}
 .skill-box .img-box img{width: 100%;}
-.skill-box h2{color: #ffeee1; font-style: italic; padding: 15px 0;}
-.skill-box p{padding: 10px 50px 20px; font-weight: 700;}
+.skill-box h2{font-style: italic; padding-bottom: 5px; color: #5d5d5d;}
 
-#portfolio .grid{overflow: hidden; padding-top: 20px;}
-#portfolio .grid .item{width: 33.33%;float: left; padding: 0 30px 30px 0; box-sizing: border-box;}
-#portfolio .btn-group{position: absolute; top: 73px; left: 500px;}
-#portfolio button{width: 100px; font-size: 14px; line-height: 30px; border: 1px solid #d4a89d; border-radius: 3px;}
-#portfolio button.on{background: #E2B698; color: #fff; border: 1px solid #E2B698; }
-#portfolio a{position: relative; display: block;}
-#portfolio a:hover .txt-wrap{opacity: 1;}
-#portfolio a:hover img{transform: scale(1.1);}
-#portfolio a .img-wrap{overflow: hidden; width: 521px; height: 348px; border-radius: 20px; box-shadow: 3px 3px 5px #ccc; border: 1px solid #e8e8e8; box-sizing: border-box;}
-#portfolio img{width: 100%; vertical-align: top; transition: all .5s;}
-#portfolio a .txt-wrap{position: absolute; top: 0; left: 0; width: 100%; height: 348px; border-radius: 20px; background: rgba(0,0,0,0.5); opacity: 0;}
-#portfolio a .txt-wrap p{font-size: 25px; position: absolute; top: 50%; transform: translateY(-50%); width: 100%; text-align: center;z-index: 1; color: #fff;}
+#portfolio {text-align: center;}
+#portfolio img{width: 900px; vertical-align: top;}
+#portfolio .sub-txt-wrap{position: relative; width: 1200px; margin: auto; text-align: left; padding: 25px 0; box-sizing: border-box;}
+#portfolio .link-group{position: absolute;top: 25px;left: 400px;}
+#portfolio .link-group a{float: left; width: 110px; line-height: 34px; margin: 0 5px; border-radius: 5px; box-sizing: border-box; text-align: center; font-size: 14px; background: #232323; color: #fff; transition: background .5s;}
+#portfolio .link-group a:hover{background: #e29898; }
+#portfolio .info{position:  relative; height: 330px; background: #232323; color: #fff; }
+#portfolio .info > div{width: 1200px; margin: auto; text-align: left; padding: 30px 0; box-sizing: border-box;}
+#portfolio .info p{padding-bottom: 20px;}
+#portfolio .info p:nth-child(1){padding-bottom: 40px;}
+#portfolio .info span{display: inline-block; width: 100px;}
+#portfolio .info .category{ position: absolute; left: 50%; top: 112px;}
+#portfolio .info .category ul{float: right; transform: translateY(-5px);}
+#portfolio .info .category ul li{float: left; width: 120px; margin-left: 10px; line-height: 30px; text-align: center;}
+#portfolio .info .category a{display: block;color: #fff;border: 1px solid #fff; box-sizing: border-box; }
+#portfolio .info .category a:hover{background: #e29898; border: 1px solid #e29898;}
+.swiper-container{width: 100%; height: 100%;}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next, .swiper-button-next, .swiper-container-rtl .swiper-button-prev{background-image: none;}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{right: 50px;}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{left: 50px;}
+.swiper-button-next, .swiper-button-prev{display: none; position: fixed; width: 60px; height: 60px; top: 410px; font-size: 60px;}
 
-#contact{text-align: center; background: #E2B698;}
 #contact .contact-box{overflow: hidden;}
-#contact .contact-box .left{width: 50%; float: left; }
+#contact .contact-box .left{text-align: center; width: 50%; float: left; }
 #contact .contact-box .left span{display: block; font-size: 4em; font-family: 'Racing Sans One', sans-serif; font-weight: bold; padding : 250px 0;}
-#contact .contact-box .right{width: 50%; margin-left: 50%; padding: 80px 20px; box-sizing: border-box;}
-#contact .contact-box .right form{width: 500px; margin: auto; text-align: left;}
-#contact .contact-box .right input{width: 100%; height: 65px; padding: 18px 25px; font-size: 14px; box-sizing: border-box; border: 1px solid transparent; margin-bottom: 15px;}
-#contact .contact-box .right input.focus, #contact .contact-box .right textarea.focus{border: 1px solid #11080A; }
-#contact .contact-box .right textarea{width: 100%; height: 300px; font-size: 14px; padding: 18px 25px; box-sizing: border-box; border: 1px solid transparent;margin-bottom: 20px; }
-#contact .contact-box .right button{width: 105px; height: 45px; border: 1px solid #11080A; color: #11080A; transition: .5s; font-weight: 700;}
-#contact .contact-box .right button:hover{background: #11080A; border: 1px solid #11080A; color: #fff;}
-#contact small{display: block;text-align: left; padding-top: 10px ; box-sizing: border-box;}
-
-#goTop{display: none; position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%;); margin-left: -25px; width: 50px; height: 50px; border-radius: 50%; background: #232323; color: #fff; }
+#contact .contact-box .right{width: 50%; margin-left: 50%; margin-bottom: 100px; padding: 30px 20px ; box-sizing: border-box;}
+#contact .contact-box .right form{width: 590px; margin: auto; text-align: left; overflow: hidden;}
+#contact .contact-box .right form > div{height: 65px; margin-bottom: 15px;}
+#contact .contact-box .right label{font-size: 40px; vertical-align: middle; float: left; line-height: 65px;}
+#contact .contact-box .right input{width: 535px;height: 100%;padding: 18px 25px;font-size: 14px;box-sizing: border-box;background: #232323;color: #fff;margin-left: 15px;float: right;}
+#contact .contact-box .right textarea{float: right; width: 535px; height: 300px; font-size: 14px; padding: 18px 25px; box-sizing: border-box; background:#232323; color: #fff;margin-bottom: 20px; }
+#contact .contact-box .right button{width: 105px; height: 45px; border: 1px solid #e29898; color: #11080A; transition: .5s; font-weight: 700; margin-left: 55px;}
+#contact .contact-box .right button:hover{background: #e29898; border: 1px solid #e29898; color: #fff;}
+#contact small{display: block;text-align: left; padding-left: 45px; box-sizing: border-box;}
