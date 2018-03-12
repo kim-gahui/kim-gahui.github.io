@@ -1,0 +1,155 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/grid.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image:url(img/img1.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(img/img2.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(img/img3.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(img/img4.jpg)"></div>
+        </div>
+        <button class="scroll"><i class="fas fa-angle-double-down"></i><span class="skip">스크롤 아래로</span></button>
+      </div>
+      <div class="title"><h1>BLUE BOTTLE <span>COFFEE</span></h1></div>
+      <button class="menu"><i class="fas fa-bars"></i><span class="skip">메뉴</span></button>
+      <nav>
+        <ul class="gnb-nav">
+          <li><a href="#">COFFEE</a>
+            <ul>
+              <li><a href="#">Subscriptions</a></li>
+            </ul>
+          </li>
+          <li><a href="#">CAFES</a>
+            <ul>
+              <li><a href="#">Bay Area</a></li>
+              <li><a href="#">New York</a></li>
+              <li><a href="#">Los Angeles</a></li>
+              <li><a href="#">Washington, D.C.</a></li>
+              <li><a href="#">Miami</a></li>
+              <li><a href="#">Tokyo</a></li>
+            </ul>
+          </li>
+          <li><a href="#">CAREERS</a></li>
+          <li><a href="#">LEARN</a>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Our Coffee</a></li>
+            </ul>
+          </li>
+          <li><a href="#">SIGN IN</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <article>
+        <div class="container sec1" id="subscribe">
+          <div class="row">
+            <div class="wrapper">
+              <div class="col-xs-12 col-sm-12 col-lg-6 left">
+                <h1>BLUE BOTTLE AT HOME</h1>
+                <h2>Subscribe to your favorite coffee</h2>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-lg-6 right">
+                <form action="">
+                  <input type="text" placeholder="id@yourmail.com">
+                  <button type="submit">SUBSCRIBE</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="msg">내용을 입력하세요.</div>
+        </div>
+      </article>
+
+      <article>
+        <div class="container sec2">
+          <div class="row">
+            <div class="wrapper">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 imgs"><img src="img/photo1.jpg" alt="사진"></div>
+                <div class="col-xs-12 col-sm-6 txt">
+                  <h2>NEW ORLEANS ICED COFFEE</h2>
+                  <p>Blended with Clover Organic Milk, organic chicory, & organic cane sugar.</p>
+                  <a href="#">READ MORE</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 imgs"><img src="img/photo2.jpg" alt="사진"></div>
+                <div class="col-xs-12 col-sm-6 txt">
+                  <h2>See you in Boston.</h2>
+                  <p><b>COMING WINTER 2018 TO MASSACHUSETTS</b> <br> Cheers to delicious coffee, now in the City of Champions.</p>
+                  <a href="#">READ MORE</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 imgs"><img src="img/photo3.jpg" alt="사진"></div>
+                <div class="col-xs-12 col-sm-6 txt">
+                  <h2>ULTIMATE PEANUT BUTTER COOKIES WITH GLANT STEPS</h2>
+                  <a href="#">READ MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="container sec3">
+          <div class="row">
+            <div class="wrapper">
+              <div class="col-xs-12 col-sm-12 col-md-6">
+                <a href="#">
+                  <figure style="background:url(img/sec3_1.jpg); background-size:cover;">
+                    <div class="contents">
+                      <h2>Women in Coffee: A Global Movement</h2>
+                    </div>
+                  </figure>
+                </a>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6">
+                <a href="#">
+                  <figure style="background:url(img/sec3_2.jpg); background-size:cover;">
+                    <div class="contents">
+                      <h2>Is This Coffee Beautiful—to You?</h2>
+                    </div>
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+    // $(window).scroll(function(){
+    // var windowTop=$(window).scrollTop();
+    // console.log(windowTop);
+    //   })
+      $('a').click(function(e){
+        e.preventDefault();
+      });
+      $('.scroll').click(function(){
+        $('html,body').animate({
+          scrollTop:$('#subscribe').offset().top
+        },800);
+       })
+    </script>
+  </body>
+</html>

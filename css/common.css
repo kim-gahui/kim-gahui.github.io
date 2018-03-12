@@ -7,4 +7,4 @@ a{text-decoration: none; color: #242424;}
 button{border: 0; background: none; cursor: pointer;}
 textarea, input{border: 0;}
 .skip{position: absolute; display: none; text-indent: -9999px; left: -9999px;}
-.powrMark.text-center{display: none; position: absolute; left: 9999px; text-indent: -9999px;}
+.formBuilder .powrMark a{color: #fff; font-size: 0; }

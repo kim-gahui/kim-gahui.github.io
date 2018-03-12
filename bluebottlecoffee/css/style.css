@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Rammetto+One');
+*{margin: 0; padding: 0;}
+html,body{position: relative;}
+body{font-family: sans-serif; background: #fff;}
+li{list-style: none; text-align: center;}
+a{text-decoration: none; color: #473e36; display: block; padding: 10px;}
+.skip{text-indent: -99999; display: none; position: absolute;}
+button{position: absolute; background: none; border: none;color: #fff;font-size: 2em; z-index: 1; outline: none;}
+header.on nav{left: 0;}
+header.on .menu{left: 300px; background: #ccc;}
+header h1{display: inline;}
+
+.swiper-container {height: 100vh;}
+.swiper-wrapper::after{position: absolute;top: 0; left: 0; width: 100%; height: 100%; content: ''; display: block; background: rgba(0,0,0,0.5);}
+.swiper-slide{background-position: center; background-size: cover; }
+button.scroll{bottom: 20px; width: 40px; height: 40px; font-size: 30px; left: 50%; transform: translateX(-50%); margin-left: -20px;animation: up-down 1s alternate infinite; }
+@keyframes up-down {
+  0%{transform: translateY(-5px);}
+  100%{transform: translateY(5px);}
+}
+.swiper-container::after{content: ''; display: block; background: rgba(0,0,0,0.5);}
+.title{position: absolute; top: 0; width: 100%; padding-top: 13px; box-sizing: border-box; text-align: center; color: #fff; font-size: 1em; z-index: 1; }
+button.menu{top: 6px;left: 0;width: 60px;height: 60px; font-size: 40px; transition: left 1s;}
+nav{position: absolute;top: 0;left: 0; z-index: 2; transition: left 1s;}
+.gnb-nav li ul{height: 0; overflow: hidden; }
+.gnb-nav > li:nth-child(1):hover ul{height: 41px;}
+.gnb-nav > li:nth-child(2):hover ul{height: 246px;}
+.gnb-nav > li:nth-child(4):hover ul{height: 82px;}
+.sec1{background: url(../img/bg.jpg) no-repeat center; background-size: cover; height: 500px; position: relative;}
+.sec1 h1{padding-top:100px; font-size: 2em; color: #271f1d;text-shadow: 2px 2px 0 #fff;}
+.sec1 h2{font-size: 1.6em; color: #fff;}
+.sec1 input{width: 300px; height: 40px; border: none; font-size: 16px; text-indent: 10px;}
+.sec1 .right button{height: 40px; font-size: 20px;background: #08a9dd;padding: 0 15px;}
+.sec1 .msg{display: none;position: absolute;top: 50%;left: 50%;padding: 50px 80px;transform: translate(-50%,-50%);background: rgba(0,0,0,0.5);min-width: 200px;text-align: center; color: #fff; border-radius: 20px;}
+.sec2 .txt{position: relative; font-family: 'Open Sans', sans-serif;}
+.sec2 .txt h2{font-family: 'Rammetto One', sans-serif; color: #06aadf; }
+.sec2 img{width: 100%; vertical-align: middle;}
+.sec2 a{position: absolute; bottom: -20px; padding: 0; color: #06aadf;}
+.sec2 a:hover{color: #00465d; }
+.sec3{margin: 0 80px; margin-bottom: 100px;}
+.sec3 a{padding: 0; color: #fff;}
+.sec3 a:hover figure{filter: grayscale(0);}
+.sec3 figure{background-position: center; background-repeat: no-repeat; filter: grayscale(1); padding: 50px; transition: filter .5s;}
+.sec3 figure div{position: relative; height: 450px;  text-align: center; border: 7px double #fff;}
+.sec3 h2{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%); text-shadow: 1px 1px #000;}
+
+/* 스마트폰 */
+@media (max-width:767px) {
+.title h1 span{display: none;}
+nav{width: 300px; height: 100%; left: -300px; background: #fff;}
+.gnb-nav > li:hover > a{background: #d6cbc2;}
+.gnb-nav > li:last-child{border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8;}
+.gnb-nav li ul{transition: height .5s;}
+.gnb-nav li ul li:hover a{color: #a97242;}
+.container{margin: 50px 0;}
+.sec1{text-align: center; }
+.right{margin-top: 100px;}
+.sec1 .right input{display: block; margin: auto;}
+.sec1 .right button{display: block; width: 300px; left: 50%; transform: translate(-50%);}
+.sec2 .txt{padding-top: 10px; padding-bottom: 50px; text-align: center; }
+.sec2 .txt h2{font-size: 1.5em;}
+.txt a{left: 50%; transform: translateX(-50%); bottom: 15px;}
+}
+
+/* 태블릿 */
+@media (min-width:768px) {
+.title h1 span{display: none;}
+nav{width: 300px; height: 100%; left: -300px; background: #fff;}
+.gnb-nav > li:hover > a{background: #d6cbc2;}
+.gnb-nav > li:last-child{border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8;}
+.gnb-nav li ul{transition: height .5s;}
+.gnb-nav li ul li:hover a{color: #a97242;}
+.container{margin: 50px 0;}
+.sec1{text-align: center; }
+.right{margin-top: 100px;}
+.sec1 .right input{display: block; margin: auto;}
+.sec1 .right button{display: block; width: 300px; left: 50%; transform: translate(-50%);}
+.sec1{margin: 200px 0;}
+.sec2{width: initial; margin: auto 100px; }
+.sec2 .txt{padding-left: 10px; box-sizing: border-box;}
+}
+
+/* 작은 데스크탑 */
+@media (min-width:992px) {
+.title{text-align: left; padding-left: 20px;}
+nav{top: 17px; margin-left: 50%; width: 50%; background: none; height: initial; left: initial;}
+nav li{text-indent: -2.5px;}
+nav a{color: #fff;}
+.gnb-nav > li:hover > a{background: none;}
+.gnb-nav > li:last-child{border-top: 0; border-bottom: 0;}
+.gnb-nav > li{float: left;width: 20%;}
+.gnb-nav > li:nth-child(2):hover ul{height: 288px;}
+.gnb-nav > li > a::after{position: relative; content: '';top: 6px; display: block; width: 0px; height: 1px; margin-left: 18px; background: #fff; transition: all 200ms ease-in-out;}
+.gnb-nav > li:hover > a::after{width: 60%; }
+.gnb-nav li ul li:hover a{color: #a97242;}
+.menu{display: none;}
+.sec1{text-align: center; }
+.right{margin-top: 100px;}
+.sec1{margin: 200px 0;}
+}
+
+/* 데스크탑 */
+@media (min-width:1200px) {
+.gnb-nav > li > a::after{margin-left: 32px;}
+.sec1{margin: 200px 0;}
+.sec1 .left{text-align: right; padding-right: 20px; box-sizing: border-box;}
+.sec1 .right{padding-left: 50px; box-sizing: border-box; text-align: left; margin-top: 153px;}
+.sec1 .right form{overflow: hidden;}
+.sec1 .right input{display: inline; margin: initial; float: left;}
+.sec1 .right button{display: inline; width: 146px; left: initial; transform: initial; float: right;}
+.sec1 h1{font-size: 3em; }
+.sec2{width: 1170px; margin: auto; margin-bottom: 200px;}
+.sec2 .wrapper{overflow: hidden;}
+.sec2 .wrapper .txt{padding-left: 40px; box-sizing: border-box;}
+.sec2 .txt{padding-left: initial;}
+.sec2 .txt h2{font-size: 3.5em; margin-top: 30px;}
+.sec2 .txt:last-of-type h2{font-size: 2.5em;}
+.sec2 .txt p{padding: 20px 0;}
+}

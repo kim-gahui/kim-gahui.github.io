@@ -1,0 +1,260 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300');
+*{margin: 0; padding: 0;}
+body{background: linear-gradient(130deg, #402a59, #272369, #514e9d, #532d75); font-family: sans-serif; color: #fff;}
+li{list-style: none;}
+a{text-decoration: none; color: #fff;}
+button{background: none; border: none; cursor: pointer;color: #fff;}
+.skip{position: absolute; display: none; left: -9999px; text-indent: -9999px;}
+img{width: 100%; }
+header{height: 100vh; position: relative; }
+header .title{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: 'Open Sans Condensed', sans-serif;}
+.title h1{color: #fff; font-size: 5em; font-weight: 200;}
+.title #blink1{animation: blink1 3s infinite alternate;}
+.title p{color: #fff; font-size: 2em;}
+.title #blink2{animation: blink2 10ms infinite alternate;}
+@keyframes blink1 {
+  40% {opacity: 0.8;}
+  42% {opacity: 0.1;}
+  43% {opacity: 0.8;}
+  45% {opacity: 0.1;}
+  46% {opacity: 0.8;}
+  }
+@keyframes blink2 {
+  70%{opacity: 0.7;}
+  }
+header{position: relative;}
+header nav{position: fixed;top: 0;left: -250px;height: 100vh;width: 250px;background: rgba(0,0,0,0.5); transition: left .5s; z-index: 5;}
+header nav.on{left: 0;}
+header nav ul{padding-top: 90px;}
+header nav ul li a{display: block;font-family: sans-serif;line-height: 50px;text-align: center;font-size: 18px;}
+header nav ul li a:hover, header nav ul li a.active{background: rgba(255,255,255,0.25); text-transform: uppercase; font-weight: bold;}
+header .btn-menu{position: fixed; top: 30px; left: 30px; width: 50px; height: 50px; z-index: 10;}
+header .btn-menu i{font-size: 50px; line-height: 50px; }
+header .btn-down{position: absolute; bottom: 30px; width: 50px; height: 50px; left: 50%; transform: translateX(-50%); animation: move 1s alternate infinite;}
+header .btn-down i{font-size: 50px; line-height: 50px;}
+@keyframes move {
+  0%{bottom: 30px;}
+  100%{bottom: 15px;}
+}
+
+article > h1{font-family: 'Open Sans Condensed', sans-serif;font-size: 3em; text-align: center; letter-spacing: 15px; padding: 100px 0;}
+article{overflow: hidden; position: relative;}
+
+#artist figure{text-align: justify;}
+#artist figure .img-box{overflow: hidden; }
+#artist figure .img-box img{transition: all .8s; vertical-align: top; filter: grayscale(1);}
+#artist figure .img-box:hover img{transform: scale(1.1);}
+#artist figure figcaption{padding: 15px 15px 25px; background: #3e3e5f; height: 196px;}
+#artist [class*='col-']:nth-child(odd) figure figcaption{background: #22223a;}
+#artist figure h2{padding: 10px 0;}
+#artist figure span{color: #a77b7b; display: block; padding: 10px 0;}
+
+#timetable{height: 100vh;}
+#timetable .huge{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: 'Lobster', sans-serif; font-style: italic;font-size: 10em; color: #22223a;}
+
+#tickets{height: 100vh}
+#tickets .left{position: relative;}
+#tickets i{position: absolute; font-size: 13em; color: #403c7b; z-index: -1;}
+#tickets .call i{top: 30px;}
+#tickets .call strong{font-size: 36px;margin: 20px 0;display: block;}
+#tickets .online{padding-top: 80px; box-sizing: border-box;}
+#tickets .online button{font-size: 20px;width: 250px;height: 40px;background: #22223a; margin-top: 30px; transition: all .5s;}
+#tickets .online button:hover{background: #fff; color: #22223a;}
+#tickets .right > div{padding-right: 250px; box-sizing: border-box;}
+#tickets .right .ticket-box{position: relative; box-sizing: border-box;padding: 13px; background: #22223a;height: 200px; border-radius: 20px;}
+#tickets .right h3, #tickets .right p{padding-bottom: 20px;}
+#tickets .right span{font-weight: bold;}
+#tickets .right .twoDay .ticket-box{background: #3e3e5f; color: #514b9a;}
+#tickets .right .twoDay [class*='col-']:nth-of-type(3) .ticket-box{color: #fff;}
+#tickets .right .twoDay [class*='col-']:nth-of-type(1) .ticket-box span,
+#tickets .right .twoDay [class*='col-']:nth-of-type(2) .ticket-box span{position: absolute; bottom: 50px;transform: rotate(20deg); font-size: 36px; color: #a77b7b;}
+
+#information{height: 100vh;}
+#information h1{padding: 50px 0;}
+#information #map{width: 100%; background: #ccc;}
+#information .txt-wrap{padding-top: 20px; box-sizing: border-box; text-align: justify;}
+#information .txt-wrap h3{padding-bottom: 10px;}
+#information .txt-wrap p{padding-bottom: 10px;}
+#information .txt-wrap span{color: #a77b7b;}
+
+#sponsor{height: 100vh;}
+#sponsor .sponsor{height: 600px; background: #fff; border: 20px solid #3e3e5f; border-radius: 60px; margin: 20px; padding: 30px; box-sizing: border-box; text-align: center;}
+#sponsor .sponsor h2{padding-bottom: 20px;;}
+#sponsor .sponsor p{font-size: 30px; color: #a77b7b; font-weight: bold; font-family: 'Open Sans Condensed', sans-serif; letter-spacing: 3px;}
+#sponsor .sponsor li{padding: 15px 0;}
+#sponsor .sponsor img{vertical-align: top; width: 180px;}
+
+#faq_contact{overflow: auto; padding-bottom: 50px;}
+#faq_contact h1{padding: 50px 0;}
+.faq-wrap{margin-left: 120px;}
+.faq-wrap .panel .panel-title{position: relative; background: #3e3e5f; padding: 13px 45px 13px 20px; border-bottom: 1px solid #a77b7b; box-sizing: border-box;}
+.faq-wrap .panel .panel-title i{position: absolute; font-size: 30px; right: 10px; top: 50%; transform: translateY(-50%);text-align: center; }
+.faq-wrap .panel:last-child .panel-title{border-bottom: none;}
+.faq-wrap .panel .panel-body{display: none; background: #fff; color: #22223a; padding: 20px;}
+.faq-wrap .panel .panel-body p{padding: 5px 0; text-align: justify;}
+.faq-wrap .panel .panel-body a{color: #22223a; text-decoration: underline;}
+.contact h2{font-size: 30px; font-style: italic; color: #a77b7b; padding-bottom: 30px;}
+.contact form{width: 600px; margin: auto;}
+.contact input{width: 100%;height: 50px;padding: 10px;box-sizing: border-box;margin-bottom: 20px;}
+.contact textarea{width: 100%; height: 250px; padding: 10px; box-sizing: border-box; margin-bottom: 20px;}
+.contact button{width: 120px; height: 50px; font-size: 16px; background: #22223a; transition: all .5s; font-weight: bold;}
+.contact button:hover{background: #a77b7b; }
+
+footer{text-align: center; padding: 20px 0; box-shadow: 0 0 1px #ccc, 0 0px 3px #000;}
+
+#goTop{display: none; position: fixed; border-radius: 50%; border : 2px solid #fff;}
+.bg{z-index: 4;height: 100%;width: 100%;position: fixed;background: transparent;top: 0;left: 0;}
+
+/* 모바일 */
+@media (max-width:767px) {
+  .title h1{font-size: 4em;}
+  .title p{font-size: 1.5em;}
+  header nav{background: #000;}
+  header .btn-menu{top: 0; left:0; width: 60px; height: 60px; background: rgba(0,0,0,0.5);}
+  header .btn-menu i{line-height: 60px;}
+
+  article > h1{font-size: 2em; padding: 13px 0 30px 0; box-sizing: border-box; letter-spacing: 0;}
+
+  #artist .wrap{width: 100%; margin: 0;}
+  #artist figure .img-box{width: 100%; height: initial; }
+  #artist figure figcaption{height: initial;}
+
+  #timetable .huge{font-size: 6em;}
+
+  #tickets{height: 100%;}
+  #tickets .left > div{padding-left: 0; text-align: center;}
+  #tickets i{right: 75px; font-size: 13em;}
+  #tickets .online{margin-bottom: 100px; padding-bottom: 30px;}
+  #tickets .online i{bottom: 30px;}
+  #tickets .right > div{padding-right: 0; padding: 20px;}
+  #tickets .right .ticket-box{margin:10px 0;}
+
+  #information{height: 100%;}
+  #information h1{padding: 13px 0 30px 0;}
+  #information .wrap{width: 100%; margin: 0; padding: 0 20px; box-sizing: border-box;}
+  #information #map{ height: 300px;}
+  #information .txt-wrap{padding: 20px 0; }
+
+  #sponsor{height: 100%;}
+  #sponsor .wrap{padding: 0;}
+  #sponsor .sponsor{height: 100%; background: none; border: 0; border-radius: 0; margin: 0; padding: 30px;}
+  #sponsor .sponsor h2{padding-bottom: 20px; color: #fff;}
+  #sponsor [class*='col-']:nth-of-type(2) h2,
+  #sponsor [class*='col-']:nth-of-type(3) h2,
+  #sponsor [class*='col-']:nth-of-type(4) h2{padding-bottom: 30px;}
+  #sponsor .sponsor ul{background: #f5f3f8;}
+  #sponsor .sponsor p{ padding-bottom: 50px;}
+
+  #faq_contact h1{padding: 13px 0 30px 0}
+  .faq-wrap{width: 100%; margin-left: 0; margin-bottom: 50px; padding: 0 20px; box-sizing: border-box;}
+  .contact form{width: 100%; margin: 0; padding: 0 20px; box-sizing: border-box;}
+
+  #goTop{bottom: 20px; width: 40px; height: 40px; right: 0; left: 50%; border: 0; background: rgba(0,0,0,0.5);transform: translateX(-50%); }
+  #goTop i{font-size: 25px; line-height: 25px;}
+
+}
+
+/* 타블렛 */
+@media (min-width:768px) {
+  #artist .wrap{width: 100%; margin: 0;}
+  #artist figure .img-box{width: 100%; height: initial; }
+  #artist figure figcaption{height: 250px;}
+
+  #timetable .huge{font-size: 6em;}
+
+  #tickets{height: 100%;}
+  #tickets .left > div{padding-left: 0; text-align: center;}
+  #tickets i{right: 0; left: 50%; transform: translateX(-50%);}
+  #tickets .online{margin-bottom: 100px; padding-bottom: 30px;}
+  #tickets .online i{bottom: 30px;}
+  #tickets .right > div{padding-right: 0; padding: 20px;}
+  #tickets .right .ticket-box{margin:10px;}
+
+  #information{height: 100%;}
+  #information .wrap{width: 100%; margin: 0; padding: 0 20px; box-sizing: border-box;}
+  #information #map{height: 300px;}
+  #information .txt-wrap{padding: 20px 0;}
+
+  #sponsor{height: 100%;}
+  #sponsor .wrap{padding: 0;}
+  #sponsor .sponsor{height: 100%; background: none; border: 0; border-radius: 0; margin: 0; padding: 30px;}
+  #sponsor .sponsor h2{color: #fff;}
+  #sponsor [class*='col-']:nth-of-type(2) h2,
+  #sponsor [class*='col-']:nth-of-type(3) h2,
+  #sponsor [class*='col-']:nth-of-type(4) h2{padding-bottom: 30px;}
+  #sponsor .sponsor ul{background: #f5f3f8;}
+  #sponsor .sponsor p{color: #a77b7b; padding-bottom: 50px;}
+
+  .faq-wrap{margin-left: 0; padding: 0 20px 50px;}
+
+  #goTop{bottom: 20px; width: 40px; height: 40px; right: 0; left: 50%; border: 0; background: rgba(0,0,0,0.5);transform: translateX(-50%); }
+  #goTop i{font-size: 25px; line-height: 25px;}
+}
+
+/* 작은 데스크탑 */
+@media (min-width:992px) {
+  #tickets{height: 100%; margin-bottom: 40px}
+  #tickets .left > div{padding-left: 0; text-align: center;}
+  #tickets i{right: 75px;}
+  #tickets .right > div{padding-right: 0; padding: 0 20px;}
+
+  #information h1{padding: 100px 0;}
+  #information .wrap{width: 100%; margin: 0; padding: 0 20px; box-sizing: border-box;}
+
+  #faq_contact h1{padding: 100px 0}
+  .faq-wrap{width: 100%; margin-left: 0; margin-bottom: 50px; padding: 0 20px; box-sizing: border-box;}
+  .contact form{width: 100%; margin: 0; padding: 0 20px; box-sizing: border-box;}
+
+  #goTop{bottom: 20px; width: 40px; height: 40px; right: 0; left: 50%; border: 0; background: rgba(0,0,0,0.5);transform: translateX(-50%); }
+  #goTop i{font-size: 25px; line-height: 25px;}
+}
+
+/* 데스크탑 */
+@media (min-width:1200px) {
+  .title h1{font-size: 5em; font-weight: 200;}
+  .title p{font-size: 2em;}
+
+  header nav{width: 250px;background: rgba(0,0,0,0.5);}
+  header .btn-menu{top: 30px; left: 30px; width: 50px; height: 50px; z-index: 10;}
+  header .btn-menu i{font-size: 50px; line-height: 50px; }
+
+  article > h1{font-size: 3em; letter-spacing: 15px; padding: 100px 0;}
+
+  #artist .wrap{width: 1200px; margin: auto;}
+  #artist figure .img-box{width: 399.95px; height: 400px;}
+  #artist figure figcaption{height: 196px;}
+  #artist figure h2{padding: 10px 0;}
+
+  #timetable .huge{font-size: 10em;}
+
+  #tickets .wrap{width: 1200px; margin: auto;}
+  #tickets .left > div{box-sizing: border-box; text-align: left;}
+  #tickets i{left: 230px;}
+  #tickets .call i{top: 30px;}
+  #tickets .online{padding-top: 80px; box-sizing: border-box;}
+  #tickets .online i{bottom: 0;}
+  #tickets .right .ticket-box{margin: 20px 20px 20px 0;box-sizing: border-box; }
+
+  #information h1{padding: 80px 0;}
+  #information .wrap{width: 1200px; margin: auto;}
+  #information #map{height: 400px;}
+  #information .txt-wrap{padding-top: 20px;}
+
+  #sponsor .wrap{padding: 0 100px;}
+  #sponsor .sponsor{height: 600px; background: #fff; margin: 10px; padding: 30px; box-sizing: border-box; text-align: center;}
+  #sponsor .sponsor h2{color: #22223a;}
+  #sponsor [class*='col-']:nth-of-type(2) h2,
+  #sponsor [class*='col-']:nth-of-type(3) h2,
+  #sponsor [class*='col-']:nth-of-type(4) h2{padding-bottom: 50px;}
+  #sponsor .sponsor ul{background: none;}
+  #sponsor .sponsor li{padding: 15px 0;}
+  #sponsor .sponsor p{font-size: 18px; color: #22223a;}
+
+  #faq_contact{height: 100%; padding-bottom: 50px;}
+  #faq_contact h1{padding: 100px 0;}
+  .faq-wrap{width: initial; margin-left: 120px;}
+  .contact form{width: 600px; margin: auto;}
+  #goTop{bottom: 50px; width: 60px; height: 60px; background: none; border : 2px solid #fff; left: initial; transform: initial; right: 50px; }
+  #goTop i{font-size: 40px; line-height: 40px;}
+}

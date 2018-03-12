@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2018 Seoul Jazz Festival</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOJpYIEpuaFXV7S37vEIP3IwHefCONQPQ&callback=initMap"
+    async defer></script>
+  </head>
+  <body>
+    <header id="intro">
+      <div class="title">
+        <span>12th</span>
+        <h1>Seoul J<span id="blink1">azz</span> Festival</h1>
+        <p>5.19 SAT - 5.20 SUN <span id="blink2">OLYMPIC</span> PARK</p>
+      </div>
+      <button class="btn-menu"><i class="material-icons">menu</i><span class="skip">토글메뉴</span></button>
+      <nav>
+        <ul>
+          <li><a href="#intro" class="active">intro</a></li>
+          <li><a href="#artist">artist</a></li>
+          <li><a href="#timetable">timetable</a></li>
+          <li><a href="#tickets">tickets</a></li>
+          <li><a href="#information">information</a></li>
+          <li><a href="#sponsor">sponsor</a></li>
+          <li><a href="#faq_contact">faq / contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn-down"><i class="material-icons">keyboard_arrow_down</i><span class="skip">아래로</span></button>
+    </header>
+
+    <section>
+      <article id="artist" class="artist">
+        <h1>ARTIST</h1>
+        <div class="wrap">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist1.jpg" alt="브랜포드 마살리스 쿼텟"></div>
+                <figcaption>
+                  <h2>브랜포드 마살리스 쿼텟</h2>
+                  <span>Branford Marsalis Quartet</span>
+                  <p>모 배터 블루스(Mo' Better Blues)로 대표되는 그래미 3회 수상의 재즈 거장. 유연함과 위트, 변화무쌍한 음악적 시도로 가장 사랑받는 재즈 쿼텟.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist2.jpg" alt="로린 힐"></div>
+                <figcaption>
+                  <h2>로린 힐</h2>
+                  <span>Ms. Lauryn Hill</span>
+                  <p>이 시대 최고 네오 소울 디바의 첫 내한공연. 넘치는 카리스마와 그루브로 전율을 일으킬 라이브 무대.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist3.jpg" alt="제시 제이"></div>
+                <figcaption>
+                  <h2>제시 제이</h2>
+                  <span>Jessie J</span>
+                  <p>팝의 여왕. 카리스마 넘치는 무대 매너와 가창력, 스타일리시함을 모두 겸비한 싱어송 라이터.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist4.jpg" alt="마세오 파커"></div>
+                <figcaption>
+                  <h2>마세오 파커</h2>
+                  <span>Maceo Parker</span>
+                  <p>펑크와 소울 재즈를 대표하는 색소포니스트. 그루브 넘치는 열정적인 무대가 기대되는 워너비 프로그램.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist5.jpg" alt="아투로 산도발 &amp; 올 스타 밴드"></div>
+                <figcaption>
+                  <h2>아투로 산도발 &amp; 올 스타 밴드</h2>
+                  <span>Arturo Sandoval &amp; His All-Star Band</span>
+                  <p>그래미 어워즈 9번 수상에 빛나는 라틴 재즈계의 트럼펫 거장. 그의 올스타 밴드와 함께 펼치는 재즈 무대.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist6.jpg" alt="크리스 보티"></div>
+                <figcaption>
+                  <h2>크리스 보티</h2>
+                  <span>Chris Botti</span>
+                  <p>재즈와 팜을 넘나드는 트렌디한 트럼펫 솔리스트. 감미롭고 우아한 무대와 다양한 솔리스트 간의 협연.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist7.jpg" alt="아이언 &amp; 와인"></div>
+                <figcaption>
+                  <h2>아이언 &amp; 와인</h2>
+                  <span>Iron &amp; Wine</span>
+                  <p>따뜻하고 섬세한 감성으로 사랑받는 음유시인. 부드러운 멜로디와 담백한 창법으로 꾸미는 서정적 무대</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist8.jpg" alt="그레첸 팔라토"></div>
+                <figcaption>
+                  <h2>그레첸 팔라토</h2>
+                  <span>Gretchen Parlato</span>
+                  <p>빌보드 선정 '가장 매혹적인 재즈 보컬리스트'. 당대 최고 재즈 뮤지션들이 가장 사랑하는 보컬리스트.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist9.jpg" alt="클린 밴딧"></div>
+                <figcaption>
+                  <h2>클린 밴딧</h2>
+                  <span>Clean Bandit</span>
+                  <p>클래식과 댄스의 절묘하고 매력적인 조화. 음악의 신선한 재해석이 돋보이는 천재적 밴드의 라이브 무대.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist10.jpg" alt="칠드런 오브 더 라이트"></div>
+                <figcaption>
+                  <h2>칠드런 오브 더 라이트</h2>
+                  <span>Children of the Light: Danilo Pérez, John Patitucci, Brian Blade</span>
+                  <p>부드러운 선율, 최고의 합을 자랑하는 놀라운 즉흥 연주로 거장의 클래스를 만끽하는 정통 재즈 무대.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist11.jpg" alt="라이"></div>
+                <figcaption>
+                  <h2>라이</h2>
+                  <span>Rhye</span>
+                  <p>감각적인 선율과 서정적 멜로디, 이에 부합하는 오묘한 보이스로 북미 리스너들과 평단의 큰 호평을 받은 아티스트.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist12.jpg" alt="에픽하이"></div>
+                <figcaption>
+                  <h2>에픽하이</h2>
+                  <span>EPIK HIGH</span>
+                  <p>끊임없는 시도로 음악적 스펙트럼을 넓히는 싱어송라이터. 감성힙합의 대표이자 다양한 음악장르를 아우르는 진일보한 세계관.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist13.jpg" alt="루시드폴 with 조윤성 &amp; 황호규"></div>
+                <figcaption>
+                  <h2>루시드폴 with 조윤성 &amp; 황호규</h2>
+                  <span>LUCID FALL TRIO</span>
+                  <p>진솔하고 깊이있는 가사와 따뜻한 음악으로 위로를 전하는 음유시인. 재즈 피아니스트 조윤성, 배이시스트 황호규와 꾸미는 수준 높은 트리오 공연.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist14.jpg" alt="듀크 엘링턴 오케스트라"></div>
+                <figcaption>
+                  <h2>듀크 엘링턴 오케스트라</h2>
+                  <span>The Duke Ellington Orchestra</span>
+                  <p>정통 재즈의 거목, 듀크 엘링턴이 1920년대에 만든 역사적인 오케스트라. 아름다운 풀 오케스트레이션 재즈를 느낄 수 있는 무대.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist15.jpg" alt="이하이"></div>
+                <figcaption>
+                  <h2>이하이</h2>
+                  <span>LEE HI</span>
+                  <p>매력적인 목소리, 섬세한 표현력이 돋보이는 독보적인 차세대 뮤지션. 레트로 소울부터 트렌디한 장르를 아우르는 팔색조 매력.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist16.jpg" alt="로일 카너"></div>
+                <figcaption>
+                  <h2>로일 카너</h2>
+                  <span>Loyle Carner</span>
+                  <p>이 시대 가장 힙한 영국 아티스트. 감미롭고 세련된 랩핑으로 빚어내는 정교하고 우아한 힙합의 재정의.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist17.jpg" alt="프렙"></div>
+                <figcaption>
+                  <h1>프렙</h1>
+                  <span>PREP</span>
+                  <p>감각적이고 트렌디한 음악으로 펑크를 재해석한 실력파 인디 밴드. 풍부한 앙상블 사운드의 라이브 무대.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist18.jpg" alt="크루앙빈"></div>
+                <figcaption>
+                  <h2>크루앙빈</h2>
+                  <span>Khruangbin</span>
+                  <p>펑크, 사이키델릭, 블루지 등 독창적인 음악스타일로 사랑받는 3인조 밴드의 이국적인 사운드.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist19.jpg" alt="헤이즈"></div>
+                <figcaption>
+                  <h2>헤이즈</h2>
+                  <span>Heize</span>
+                  <p>힙합과 리듬 앤 블루스를 기반으로 독특한 보이스를 접목하여 주목받는 감성 싱어송라이터.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist20.jpg" alt="더 소울 레벨스"></div>
+                <figcaption>
+                  <h2>더 소울 레벨스</h2>
+                  <span>The Soul Rebels</span>
+                  <p>뉴올리언스 출신의 8인조 브라스 밴드. 소울, 재즈, 펑크, 힙합, 팝 음악을 어우르는 현 재즈계의 대표적 밴드.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="img-box"><img src="img/artist21.jpg" alt="리차드파커스 "></div>
+                <figcaption>
+                  <h2>리차드파커스 </h2>
+                  <span>RICHARD PARKERS</span>
+                  <p>독특한 음색과 감성으로 자신만의 음악적 세계를 각인하는 싱어송라이터.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article id="timetable">
+        <h1>TIMETABLE</h1>
+        <div class="huge">Coming Soon</div>
+      </article>
+      <article id="tickets">
+        <h1>TICKETS</h1>
+        <div class="wrap">
+          <div class="row">
+            <div class="left col-xs-12 col-sm-12 col-lg-5">
+              <div class="call">
+                <i class="material-icons">contact_phone</i>
+                <h2>전화예매</h2>
+                <strong>1544-1555</strong>
+                <h2>English Booking</h2>
+                <strong>02-563-0595</strong>
+              </div>
+              <div class="online">
+                <i class="material-icons">laptop_mac</i>
+                <h2>인터파크</h2>
+                <button class="btn btn-link">BUY TICKET</button>
+              </div>
+            </div>
+            <div class="right col-xs-12 col-sm-12 col-lg-7">
+              <div class="twoDay">
+                <h2>2-DAY PASS</h2>
+                <div class="col-xs-12 col-sm-4">
+                  <div class="ticket-box">
+                    <h3>Blind Ticket</h3>
+                    <p>&#8361; 155,000</p>
+                    <span>SOLD OUT</span>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <div class="ticket-box">
+                    <h3>Early Bird Ticket</h3>
+                    <p>&#8361; 185,000</p>
+                    <span>SOLD OUT</span>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <div class="ticket-box">
+                    <h3>Regular Price Ticket</h3>
+                    <p>&#8361; 240,000</p>
+                    <span>NOW ON SALE</span>
+                  </div>
+                </div>
+              </div>
+              <div class="oneDay">
+                <h2>1-DAY PASS</h2>
+                <div class="col-xs-12 col-sm-4">
+                  <div class="ticket-box">
+                    <h3>Pre Sale Ticket</h3>
+                    <p>&#8361; 135,000</p>
+                    <span>NOW ON SALE</span>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <div class="ticket-box">
+                    <h3>Regular Price Ticket</h3>
+                    <p>&#8361; 155,000</p>
+                    <span>COMING SOON</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article id="information">
+        <h1>INFORMATION</h1>
+        <div class="wrap">
+          <div id="map"></div>
+          <div class="txt-wrap">
+            <h3>제 12회 서울재즈페스티벌 2018 오시는 길</h3>
+            <p>교통 혼잡이 예상되오니 대중교통을 이용하여 주시기 바랍니다. 주차관련 사항은 올림픽공원의 규정에 따릅니다.</p>
+            <p>지하철 : 5호선 올림픽공원역 3번출구</p>
+            <p>버스 <br>- 지선버스 : 3212, 3214, 3216, 3220, 3316, 3319, 3412, 3413, 3414, 3416, 4313, 4213 <br>- 간선버스 : 371 <br>- 공항버스 : 606 <br>- 경기버스 : 30, 30-5, 30-6</p>
+            <p>승용차 이용 <br>주소: 서울 송파구 올림픽로 424 <br><span>올림픽공원 주차 요금: 대형 12,000원, 소형 최초 1시간 1,000원+이후 15분당 500원 </span></p>
+            <p>* 주차문제로 인해 공연장에 늦게 도착하시어 관람에 불편함이 발생하실 수 있습니다. 버스, 지하철 등 대중교통을 이용해 주시기 바랍니다.</p>
+          </div>
+        </div>
+      </article>
+      <article id="sponsor">
+        <h1>SPONSOR</h1>
+        <div class="wrap">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+              <div class="sponsor">
+                <h2>Presented by</h2>
+                <ul>
+                  <li><img src="img/s_logo1.png" alt="sbs"></li>
+                  <li><img src="img/s_logo2.png" alt="private curve"></li>
+                  <li><img src="img/s_logo3.png" alt="interpark"></li>
+                  <li><img src="img/s_logo4.png" alt="지니뮤직"></li>
+                  <li><img src="img/s_logo5.png" alt="국민체육진흥공단"></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+              <div class="sponsor">
+                <h2>Sponsored by</h2>
+                <img src="img/s_logo6.png" alt="BMW">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+              <div class="sponsor">
+                <h2>Produced by</h2>
+                <img src="img/s_logo2.png" alt="private curve">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+              <div class="sponsor">
+                <h2>제휴, 협찬, 단체구매 문의</h2>
+                <p>sjf@privatecurve.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article id="faq_contact">
+        <h1>FAQ / CONTACT</h1>
+        <div class="row">
+          <div class="faq col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="faq-wrap">
+              <div class="panel">
+                <div class="panel-title">[관람] 페스티벌 구역의 입장 및 이동 방법을 알고 싶습니다.<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>현장 매표소 및 입장 팔찌 교환부스는 오전 10시부터 운영될 예정입니다. (티켓 수령시 예매번호와 신분증 지참) 구매하신 티켓을 현장의 입장팔찌 교환부스에서 팔찌(손목밴드)로 교환하셔야 공연장 내로 입장이 가능 합니다.</p>
+                  <p>스테이지별 입장 시간이 추후 공지될 예정입니다. 입장 팔찌 착용 후 자유롭게 스테이지간 이동 및 재입장이 가능합니다. 각 스테이지 별 수용인원이 정해져 있으며 현장 상황에 따라 안전 문제로 입장이 제한될 수 있습니다.</p>
+                  <p>팔찌 훼손 및 분실 시 재발행 되지 않으니 주의 바랍니다.</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[관람] 반입 가능한 물품과 금지물품이 궁금합니다.<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>각 공연장 입구에서 반입 금지 물품의 소지 여부를 확인합니다.</p>
+                  <b>반입 가능</b>
+                  <p>모자, 선글라스, 자외선 차단제, 돗자리, 재활용 가능 용기에 담긴 도시락, 텀블러, 우비, 담요, 담배(흡연구역 이용), 만 7세 미만 유아 입장, 당일 재입장(팔찌 확인)</p>
+                  <b>반입 불가</b>
+                  <p>텐트 및 의자, 피크닉 테이블, 캠핑/취사, 캔/병, 배달음식, 프로페셔널 촬영 장비, 불꽃놀이, 마약, 캐리어, 동물, 당일 환불 및 교환</p>
+                  <p>유모차와 휠체어는 고객의 편의를 위해 반입은 가능하지만 일부 구역에서 제지될 수 있으니 안내원의 안내에 따라주시기 바랍니다.</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[관람] 공연시간이 어떻게 되나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">타임테이블을 참고해주세요.</div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[관람] 돗자리를 사용할 수 있나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>돗자리의 크기는 2인에 1m * 1m 규격으로 제한합니다.</p>
+                  <p>메인 스테이지인 88 잔디마당(May Forest)의 특정 구역으로 사용이 제한됩니다.</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[관람] 다른 공연장으로 이동시 자리를 맡아두어도 되나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">공연장 내 자리 맡아두기를 엄격히 금지하고 있습니다.</div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[관람] 공연은 지정좌석에서 관람해야 하나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">본 페스티벌은 야외 및 실내에서 진행되며 지정 좌석 없이 자유로운 공간에서 관람하실 수 있습니다.</div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[기타] F&amp;B부스 입점 신청은 어디로 해야 하나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">서울재즈페스티벌 2018 F&amp;B 및 홍보 부스 신청은 추후 공지됩니다.</div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[기타] 보도자료를 요청하려면 어디로 연락해야 하나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">sjf@privatecurve.com으로 연락 주시기 바랍니다.</div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[기타] 물품 보관소를 운영하나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>페스티벌 구역 내 유료 물품보관소를 운영합니다.</p>
+                  <p>귀중품 및 파손에 주의하여야 하는 품목은 보관되지 않습니다.</p>
+                  <p>물품보관소는 조기에 마감 될 수 있으니 개인 짐을 최소화하시기 바랍니다.</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[기타] 우천시에도 공연이 진행되나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">우천 시에도 공연이 정상적으로 진행됩니다.</div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[기타] 공연장내에서 응급상황이 생겼을 경우 어떻게 하나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>페스티벌 구역 곳곳에 진행 및 안전요원이 배치 되어 있습니다. 응급상황이 생겼을 경우 가까운 진행 요원에게 문의하시어 협조를 받으시기 바랍니다.</p>
+                  <p>관객의 부주의로 인한 부상에 대해 환불이나 보상이 불가 합니다.</p>
+                  <p>각 공연장내 비상구를 사전에 확인해두시고 비상상황 시 현장진행요원의 안내에 따라 신속히 이동해주시기 바랍니다.</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[기타] 머천다이징 상품을 판매 하나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>현장에서 서울재즈페스티벌 2018의 공식 머천다이징 상품을 판매 합니다.</p>
+                  <p>현장에서 구입한 물건의 교환 및 환불이 불가하며 불량 상품에 한해 동일 상품으로 교환이 가능합니다.</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[기타] 공연장 내에 식음료를 판매 하나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>잔디마당과 공연장 이동 동선의 일부 구역에 F&amp;B 식음료 및 MD(각종 상품)부스가 마련됩니다.</p>
+                  <p>F&amp;B 식음료 및 MD 이용 시 카드와 현금결제가 가능합니다.
+                    행사장과 가까운 현금지급기 위치는 두 곳이며 많은 인원이 몰릴 것으로 예상되니 현금 이용 시 미리 준비해 오시기를 권해 드립니다.</p>
+                  <p>배달음식, 패스트푸드 포장 음식을 포함한 외부 음식물의 반입이 일절 금지됩니다. (500ml이하의 페트병 1인 1개에 한 함)</p>
+                  이외의 다른 용기에 담긴 음료는 반입할 수 없습니다. 일회용품이 아닌 용기에 담긴 도시락은 반입이 가능합니다.
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[기타] 공연장 내에서 주류구입 및 흡연이 가능하나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>성인 인증 부스에서 신분증 확인 후 성인 인증 팔찌를 발급합니다. 신분증 미지참 시 발급이 불가하오니 신분증을 반드시 지참해 주시기 바랍니다.</p>
+                  <p>주류 구매와 흡연구역 이용은 성인 인증을 받은 분들만 이용 가능합니다. 흡연은 지정된 흡연구역에서만 가능합니다.</p>
+                  <p>과도한 음주 및 행위 등으로 다른 관객에게 피해가 초래될 경우 강제 퇴장될 수 있으며 환불은 되지 않습니다.</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[예매] 유아 입장이 가능한가요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>만 7세 미만의 아동은 보호자 동반 시 무료 입장이 가능하나 만 7세 이상 아동은 티켓을 반드시 구입하셔야 입장이 가능 합니다.</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[예매] 단체 구매를 하고 싶습니다.<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  50인 이상 단체 구매가 가능합니다. 02)563-0595로 문의주시기 바랍니다.
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[예매] 예매한 티켓을 취소하고 싶습니다.<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>예매 티켓의 취소는 관람일 전일까지 인터파크 예매 취소 규정에 따라 가능하며 공연 당일 변경이나 환불은 절대 불가합니다. 배송 받은 티켓은 예매 취소 가능일까지 예매처로 반송되어야 합니다</p>
+                  <p><b>예매 취소 시 배송 받은 티켓을 예매처로 반송 하셔야 취소가 가능합니다.</b></p>
+                  <p>취소 시점에 따라 취소 수수료가 다릅니다. 자세한 내용은 취소 환불 규정을 참조 하시기 바랍니다.</p>
+                  <a href="#">인터파크 예매 취소 환불 안내</a>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[예매] 예매한 티켓은 어떻게 받나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>페스티벌 현장의 혼잡과 불편함을 막기 위해 일정기간 동안의 예매는 배송으로만 티켓수령이 가능합니다.</p>
+                  <p>공연 일주일전부터는 현장수령방식으로만 티켓을 수령하실 수 있습니다. 현장수령 시 예매자의 신분증과 예매내역서를 꼭 지참해 주시기 바랍니다.</p>
+                </div>
+              </div>
+              <div class="panel">
+                <div class="panel-title">[예매] 티켓을 구입하려면 어떻게 해야 하나요?<i class="material-icons">keyboard_arrow_down</i></div>
+                <div class="panel-body">
+                  <p>온라인예매 : 인터파크티켓 </p>
+                  <p>전화예매 : 인터파크 티켓 1544-1555</p>
+                  <p>단체예매 : 프라이빗커브 02-563-0595</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <form action="#">
+              <h2>Please fill up our form for a Question.</h2>
+              <div>
+                <input type="text" placeholder="YOUR NAME">
+              </div>
+              <div>
+                <input type="text" placeholder="YOUR EMAIL">
+              </div>
+              <div>
+                <textarea name="name" rows="8" cols="80" placeholder="YOUR MESSAGE"></textarea>
+              </div>
+              <button>SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <div class="wrap">
+        <p>Produced by <b>PRIVATE CURVE</b></p>
+        <small>COPYRIGHT (C) PRIVATE CURVE 2015. ALL RIGHTS RESERVED.</small>
+      </div>
+    </footer>
+    <button id="goTop"><i class="material-icons">arrow_upward</i><span class="skip">위로가기</span></button>
+  </body>
+</html>
