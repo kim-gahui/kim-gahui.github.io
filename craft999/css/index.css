@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?15672009');
+  src: url('../font/fontello.eot?15672009#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?15672009') format('woff2'),
+       url('../font/fontello.woff?15672009') format('woff'),
+       url('../font/fontello.ttf?15672009') format('truetype'),
+       url('../font/fontello.svg?15672009#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: auto;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: #242424;}
+button{border: 0; background: none; cursor: pointer; outline: none;}
+body{color: #242424; font-family: 'Nanum Gothic', sans-serif;}
+.skip{display: none; text-indent: -9999px; position: absolute; left: -9999px;}
+.center{position: relative; width: 1150px; margin: auto;}
+
+header.on .gnb-nav > ul::before{height: 80px;}
+header .title{padding-top: 30px; margin-bottom: 80px;}
+header .title img{vertical-align: middle;}
+header .mobile-menu, header .mobile-search, .mobile-login{display: none;}
+.gnb-nav{position: absolute; right: 150px; top: 25px; z-index: 1;}
+.gnb-nav > ul{overflow: hidden; width: 330px;}
+.gnb-nav > ul::before{position: absolute; display: block; content: ''; width: 330px; height: 0; background: #242424; top: 35px; z-index: -1; transition: 0.5s;}
+.gnb-nav > ul > li{float: left; }
+.gnb-nav > ul > li > a{display: block; font-size: 14px; font-weight: 900;margin: 10px 30px; }
+.gnb-nav > ul > li > a.active,
+.gnb-nav > ul > li > a:hover{color: #d51717;}
+.gnb-nav li ul{display: none;}
+.gnb-nav li ul li{text-align: center;}
+.gnb-nav li ul li a{font-size: 14px; color: #fff; }
+.gnb-nav li ul li a:hover{text-decoration: underline;}
+
+.sub-nav.open{right: 0;}
+.mobile-login-form{display: none;}
+.sub-nav{position: fixed;right: -240px; top: 0; height: 100vh; background: rgba(0,0,0,0.6); z-index: 3; transition: .5s;}
+.sub-nav .btn-open{position: absolute; top: 50%; transform: translateY(-50%); left: 10px; width: 20px ;height: 33px; font-size: 30px; color: #fff;}
+.sub-nav form{width: 200px; padding: 30px 40px 0; overflow: hidden;}
+.sub-nav form input{margin-bottom: 20px;}
+.sub-nav form.sub-search input{height: 35px; width: 170px; float: left; padding-left: 10px; box-sizing: border-box;}
+.sub-nav form .btn-search{float: right; width: 30px; height: 35px; font-size: 23px; color: #fff; vertical-align: top;}
+.sub-nav form.login-form{padding-top: 0;}
+.sub-nav form.login-form .cancel{display: none;}
+.sub-nav form.login-form input{height: 40px; width: 200px; color: #fff;background: #242424; border: 1px solid #fff; box-sizing: border-box; padding-left: 10px;}
+.sub-nav form .login, .sub-nav form .sign{display: block; font-size: 14px; width: 100px;height: 35px;color: #fff; border: 1px solid #fff; box-sizing: border-box;}
+.sub-nav form .login{background: #ffac00; float: left;}
+.sub-nav form .sign{background: #242424;}
+.sub-nav form a{display: block; width: 200px;color: #fff; font-size: 14px; font-weight: bold; text-align: center; margin: 20px 0 10px 0;}
+.sub-nav ul.info{width: 200px; overflow: hidden; margin: auto;}
+.sub-nav .info li{float: left;width: 33.33%; text-align: center;}
+.sub-nav .info li a{color: #fff; display: block; font-size: 35px;}
+.sub-nav .info li a span{display: block; font-size: 14px;}
+.sub-nav ul.sns{ overflow: hidden;}
+.sub-nav .sns li{position: absolute; left: 7px;}
+.sub-nav .sns li:first-child{bottom: 100px;}
+.sub-nav .sns li:nth-child(2){bottom: 60px;}
+.sub-nav .sns li i{vertical-align: middle;}
+.sub-nav .sns li button{display: block; overflow: hidden; width: 30px; height: 30px; text-align: left; font-size: 30px; line-height: 30px; color: #fff;}
+.sub-nav .sns li.open button{width: 178px;}
+.sub-nav .sns li a{color: #fff; height: 30px;border-bottom: 1px solid #fff;box-sizing: border-box;display: inline-block;}
+.sub-nav .sns li a span{font-size: 14px; vertical-align: top;}
+.sub-nav > .btn-search{position: fixed; right: 10px; top: 34px;font-size: 20px; width: 20px; height: 20px; color: #fff;}
+.search-form{display: none; position: fixed; right: 40px; top: 31px; z-index: 3;}
+.search-form input{width: 420px; height: 30px; border: 1px solid #333; box-sizing: border-box; padding: 0 35px 0 10px; float: left; font-size: 14px;}
+.search-form .btn-in-search{width: 35px; height: 30px; font-size: 20px; color: #000; margin-left: -36px;}
+
+.main-slide{height: 600px;}
+.main-slide .mobile{display: none;}
+.main-slide ul{overflow: hidden; height: 100%;}
+.main-slide ul li{display: none; position: absolute;}
+.main-slide img{vertical-align: top; width: 100%; height: 600px;}
+
+.product{margin-top: 100px;}
+.new{margin-bottom: 100px; position: relative;}
+.new > ul{overflow: hidden; width: 100%; margin: auto;}
+.new > ul > li{position: relative; float: left; width: 33.33%;}
+.new li ul li{position: relative;}
+.new ul li a{display: block;}
+.new ul li a img{vertical-align: top; width: 100%;}
+.new ul li a .txt-wrap{position: absolute;bottom: -82px;width: 100%;padding: 20px;background: rgba(0,0,0,0.5);color: #fff;text-align: right;box-sizing: border-box; transition: .5s;}
+.new ul li a:hover .txt-wrap{bottom: 0;}
+.new > a{width: 120px; height: 50px; position: absolute; left: 50px; top: -50px; text-align: center; line-height: 50px; background: #ff7300; font-size: 14px; color: #fff; transition: background .3s;}
+.new > a:hover{background: #ffac00;}
+
+.store{position: relative;background: #242424; overflow: hidden;}
+.store::after{position: absolute;display: block;content: ''; height: 1px; width: 100%; background:#ccc; top: 42px;}
+.store h2{padding-top: 10px;}
+.store .center > div{float: left; width: 50%; color: #ccc;}
+.store .left ul{padding: 50px 0 0 60px;}
+.store .left ul li p:nth-of-type(1){color: #ffac00; font-size: 18px;}
+.store .left ul li p:nth-of-type(2), .store .left ul li a{color: #fff; font-size: 14px;}
+.store .left ul li p:nth-of-type(2){padding-bottom: 50px;}
+.store .right{position: relative; }
+.store .right .store-list{position: absolute; width: 350px; top: 52px; left: 50px;z-index: 3;}
+.store .right .store-list i{position: absolute; width: 20px; height: 20px; line-height: 20px; font-size: 25px; color: #fff; right: 10px; top: 10px;}
+.store .right .store-list a{display: block;color: #fff; font-size: 16px; font-weight: bold;}
+.store .right .store-list > ul{overflow: hidden;}
+.store .right .store-list > ul > li{line-height: 40px; background: #000; text-align: center;border: 1px solid transparent; box-sizing: border-box; }
+.store .right .store-list > ul > li > a{border: 1px solid #fff; box-sizing: border-box;}
+.store .right .store-list .store-detail{height: 0; transition: all .3s; overflow: hidden;}
+.store .right .store-list .store-detail.on{height: 126px;}
+.store .right .store-list .store-detail li.active a{color: #ffac00;}
+
+#map{width: 450px; height: 450px; margin: 60px 0 20px 0;}
+
+.cs_info{float: left; width: 50%; font-size: 12px; padding: 20px 0 0 60px; box-sizing: border-box;}
+.web_info{width: 50%; margin-left: 50%;padding-top: 20px;}
+.web_info ul{overflow: hidden;}
+.web_info ul li{float: left; padding: 0 5px; border-right: 1px solid #000; box-sizing: border-box; line-height: 12px;}
+.web_info ul li:first-child{padding-left: 0;}
+.web_info ul li:last-child{border-right: 0;}
+.web_info ul li a{font-size: 12px; color: #000; font-weight: 900; display: block;}
+.shop_info{width: 50%; margin-left: 50%; font-size: 12px; padding-bottom: 20px;  margin-top: 10px;}
+
+.popup-store{display: none; position: fixed; left: 50%; transform: translateX(-50%); top: 100px; z-index: 1000; background: #242424; color: #fff; padding: 10px 20px 20px; width: 380px;}
+.popup-store .btn-close{position: absolute;right: 20px; top: 20px; color: #d51717; width: 25px;height: 25px;font-size: 20px;}
+.popup-store h1{text-align: center; font-size: 30px; padding-bottom: 10px;}
+.popup-store img{width: 100%; vertical-align: top; margin-bottom: 10px; border: 1px solid #fff; padding: 10px; box-sizing: border-box;}
+.popup-store dt{font-weight: bold;}
+.popup-store dd{padding: 5px 0 10px;}
+
+.bg{position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; background: rgba(0,0,0,0.5);}
+
+@media (max-width:767px) {
+  .center{width: 100%;}
+
+  header{height: 50px;}
+  header .mobile-menu, header .mobile-search{display: block; width: 30px; height: 30px; font-size: 30px; position: absolute; top: 10px;}
+  header .mobile-menu{left: 15px; z-index: 15;}
+  header.toggle .mobile-menu{color: #fff; position: fixed;}
+  header.toggle .mobile-login{display: block;}
+  header .mobile-search{font-size: 20px; right: 15px;}
+  header .title{padding-top: 15px; margin-bottom: 0; text-align: center;}
+  header .title img{width: 145px;}
+  .gnb-nav{display: none; position: fixed; right: auto; top: 0; left: 0; width: 100vw; height: 100vh; background: #000; z-index: 10;}
+  .gnb-nav .mobile-login{width: 30px; height: 30px; font-size: 30px; position: absolute; top: 10px; right: 15px; color: #fff;}
+  .gnb-nav > ul{width: 100%; padding: 50px 0 0 0; box-sizing: border-box;}
+  .gnb-nav > ul::before{display: none;}
+  .gnb-nav > ul > li{float: none; box-sizing: border-box;}
+  .gnb-nav > ul > li > a{display: block;font-size: 18px; padding: 5px 0 5px 25px; margin: 0; color: #fff;}
+  .gnb-nav > ul > li > a.active, .gnb-nav > ul > li > a:hover{color: #d51717;}
+  .gnb-nav li ul{display: block;}
+  .gnb-nav li ul li{text-align: left;}
+  .gnb-nav li ul li a{display: block;font-size: 18px; color: #fff; padding: 5px 0 5px 25px;}
+  .gnb-nav li ul li a:hover{text-decoration: none;}
+
+  .sub-nav{display: none;}
+  .mobile-login-form{position: fixed; top: 0; left: 0; width: 100%; z-index: 33;}
+  .mobile-login-form form{text-align: center; overflow: hidden; width: 300px; margin: auto; padding-top: 110px;}
+  .mobile-login-form form input{font-size: 14px; width: 100%; height: 40px; padding-left:10px; margin-bottom: 10px; color: #fff; background: #242424; border: 1px solid #fff; box-sizing: border-box;}
+  .mobile-login-form form button{width: 150px; height: 40px; font-size: 15px; color: #fff; float: left; margin: 20px 0; border: 1px solid #fff; box-sizing: border-box;}
+  .mobile-login-form .login{background: #ffac00;}
+  .mobile-login-form .sign{background: #242424;}
+  .mobile-login-form form a{clear: left;display: block; text-align: center; color: #fff; font-size: 14px;}
+  .mobile-login-form .cancel{position: absolute; top: 65px; left: 50%; transform: translateX(-50%) rotate(45deg);width: 30px; height: 30px; line-height: 30px;font-size: 40px; color: #fff}
+  .bg{position: fixed; top: 0; width: 100%; height: 100vh; background: rgba(0,0,0,0.5); z-index: 32;}
+
+  .main-slide{height: 100vh;}
+  .main-slide .pc{display: none;}
+  .main-slide .mobile{display: block;}
+  .main-slide ul{overflow: hidden; height: 100%;}
+  .main-slide ul li{display: none; position: absolute;}
+  .main-slide img{vertical-align: top; width: 100%; height: auto;}
+
+  .product{margin-top: 20px;}
+  .new > ul > li{float: none; width: 100%;}
+  .new ul li a .txt-wrap{bottom: 0; text-align: left;}
+  .new > a{width: 90px; height: 40px; left: 50%; top: auto; bottom: -60px; transform: translateX(-50%); line-height: 40px;}
+
+  .store::after{display: none;}
+  .store h2{padding-top: 50px;}
+  .store .center > div{float: none; width: 100%; text-align: center}
+  .store .left ul{padding: 40px 0 0 0;}
+  .store .left ul li p:nth-of-type(1){font-size: 16px;}
+  .store .left ul li p:nth-of-type(2){padding-bottom: 15px;}
+  .store .right h2{padding-top: 35px;}
+  .store .right .store-list{width: 100%; top: 102px; left: 0;}
+  .store .right .store-list i{width: 25px; height: 25px; line-height: 25px; font-size: 25px; right: 15px; top: 13px;}
+  .store .right .store-list > ul > li{line-height: 50px; }
+  .store .right .store-list .store-detail.on{height: 156px;}
+
+  #map{width: 100%; height: 360px; margin: 110px 0 0 0;}
+
+  footer{text-align: center; }
+  .cs_info{float: none; width: 100%; padding-left:0; font-size: 14px;}
+  .web_info{width: 100%; margin-left: 0;padding: 15px 10px 5px 10px; box-sizing: border-box;}
+  .web_info ul li{line-height: 20px; float: none;}
+  .web_info ul li a{font-size: 14px;}
+  .shop_info{width: 100%; margin-left: 0; font-size: 14px;}
+
+  .popup-store{top: 10px; padding: 10px 20px 20px; width: 80%;}
+  .popup-store .btn-close{right: 10px; top: 13px;}
+  .popup-store h1{font-size: 20px;}
+  .popup-store img{width: 300px; border: 0; padding: 20px;}
+  .popup-store .store-info{padding: 0 20px;}
+}
