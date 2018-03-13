@@ -1,4 +1,15 @@
 $(function(){
+  // new WOW().init();
+  wow = new WOW(
+    {
+    // boxClass:     'wow',      // default
+    // animateClass: 'animated', // default
+    offset:       500,          // default
+    // mobile:       true,       // default
+    // live:         true        // default
+  }
+  )
+  wow.init();
 
   $(window).scroll(function(){
     var home=$('#home').offset().top;
@@ -76,5 +87,4 @@ $(function(){
     },
     loop:true,
   });
-
 })

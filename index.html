@@ -7,7 +7,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/portfolio.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/common.css">
@@ -33,7 +35,7 @@
     </div>
     <section>
       <article id="about">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 resume">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 resume wow slideInLeft">
           <h1>About</h1>
           <div class="txt-wrap">
             <p>컨텐츠 가독성이 높은 레이아웃 구성에 집중하는 웹 퍼블리셔 김가희입니다.</p>
@@ -43,7 +45,7 @@
             <p>이용자와 공급자 간 의사소통 능률을 높이는 동적 방법을 모색하고, 끊임없이 탐구하는 것이 저의 기쁨입니다.</p>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 skills">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 skills wow slideInRight">
           <h1>Skills</h1>
           <div class="skill-box">
             <!-- <div class="img-box">
@@ -103,9 +105,9 @@
         </div>
       </article>
       <article id="portfolio">
-        <h1>portfolio</h1>
+        <h1 class="wow fadeIn">portfolio</h1>
         <!-- 개별 포트폴리오 부분 -->
-        <div class="swiper-container">
+        <div class="swiper-container wow fadeIn" data-wow-delay=".5s">
           <div class="swiper-wrapper">
             <div class="swiper-slide" id="seoulJazzFestival">
                 <img src="image/sub1.png" alt="Seoul Jazz Festival 2018">
@@ -215,15 +217,15 @@
         </div>
       </article>
       <article id="contact">
-        <h1>Contact</h1>
+        <h1 class="wow fadeIn">Contact</h1>
         <div class="contact-box">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 left">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 left wow slideInLeft" data-wow-delay=".3s">
             <span>gahee4@gmail.com</span>
             <small>copyright &copy; 김가희 All right reserved.</small>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 right">
             <script src="https://www.powr.io/powr.js?external-type=html"></script>
-            <div class="powr-contact-form" id="933657cc_1520834580"></div>
+            <div class="powr-contact-form wow slideInRight" id="933657cc_1520834580" data-wow-delay=".3s"></div>
             <!-- <form action="#">
               <div>
                 <label for="company"><i class="fas fa-building"></i></label>

@@ -24,6 +24,7 @@ nav ul li:hover a{color: #000;}
 #about h1{padding: 0 0 30px 0;}
 #about > div{padding: 30px ; box-sizing: border-box;}
 #about > div > div{box-sizing: border-box;}
+#about .resume .txt-wrap{font-weight: 700;}
 #about .resume{background: #f1e4e4; }
 #about .resume .txt-wrap{max-width: 35em; margin-left: auto; margin-right: auto;}
 #about .resume p{line-height: 2; padding: 15px 0; text-align: justify; font-size: 15px;}
@@ -197,6 +198,7 @@ nav ul li:hover a{color: #000;}
 #about > div{padding: 30px ; box-sizing: border-box; height: 100vh;}
 #about > div > div{padding-left: 80px; box-sizing: border-box;}
 #about .resume{background: #f1e4e4;}
+#about .resume .txt-wrap{margin-top: 60px;}
 #about .skills .skill-box{margin: 30px 0; text-align: left;}
 #about .skills .skill-box .txt-box{ display: inline-block; margin-top: 5px;}
 #about .skills .skill-box:nth-of-type(1) .txt-box{margin-top: 35px; }
