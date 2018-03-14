@@ -77,14 +77,14 @@ nav{width: 300px; height: 100%; left: -300px; background: #fff;}
 .sec1 .right input{display: block; margin: auto;}
 .sec1 .right button{display: block; width: 300px; left: 50%; transform: translate(-50%);}
 .sec1{margin: 200px 0;}
-.sec2{width: initial; margin: auto 100px; }
+.sec2{width: auto; margin: auto 100px; }
 .sec2 .txt{padding-left: 10px; box-sizing: border-box;}
 }
 
 /* 작은 데스크탑 */
 @media (min-width:992px) {
 .title{text-align: left; padding-left: 20px;}
-nav{top: 17px; margin-left: 50%; width: 50%; background: none; height: initial; left: initial;}
+nav{top: 17px; margin-left: 50%; width: 50%; background: none; height: auto; left: auto;}
 nav li{text-indent: -2.5px;}
 nav a{color: #fff;}
 .gnb-nav > li:hover > a{background: none;}
@@ -107,13 +107,12 @@ nav a{color: #fff;}
 .sec1 .left{text-align: right; padding-right: 20px; box-sizing: border-box;}
 .sec1 .right{padding-left: 50px; box-sizing: border-box; text-align: left; margin-top: 153px;}
 .sec1 .right form{overflow: hidden;}
-.sec1 .right input{display: inline; margin: initial; float: left;}
-.sec1 .right button{display: inline; width: 146px; left: initial; transform: initial; float: right;}
+.sec1 .right input{display: inline; margin: auto; float: left;}
+.sec1 .right button{display: inline; width: 146px; left: auto; transform: none; float: right;}
 .sec1 h1{font-size: 3em; }
 .sec2{width: 1170px; margin: auto; margin-bottom: 200px;}
 .sec2 .wrapper{overflow: hidden;}
 .sec2 .wrapper .txt{padding-left: 40px; box-sizing: border-box;}
-.sec2 .txt{padding-left: initial;}
 .sec2 .txt h2{font-size: 3.5em; margin-top: 30px;}
 .sec2 .txt:last-of-type h2{font-size: 2.5em;}
 .sec2 .txt p{padding: 20px 0;}
