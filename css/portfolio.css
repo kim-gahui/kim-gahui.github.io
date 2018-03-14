@@ -47,6 +47,7 @@ nav ul li:hover a{color: #000;}
 #portfolio .info p{padding-bottom: 20px;}
 #portfolio .info p:nth-child(1){padding-bottom: 40px;}
 #portfolio .info span{display: inline-block; width: 100px;}
+#portfolio .info p > a{color: #e29898;}
 #portfolio .info .category{ position: absolute; left: 50%; top: 112px;}
 #portfolio .info .category ul{float: right; transform: translateY(-5px); overflow: hidden;}
 #portfolio .info .category ul li{float: left; width: 120px; margin-left: 10px; line-height: 30px; text-align: center;}
