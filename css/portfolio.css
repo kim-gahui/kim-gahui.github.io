@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body{word-break: keep-all;}
 header{height: 100vh; position: relative;}
-header .title{font-family: 'Open Sans', sans-serif;position: absolute; top: 30%; left: 50%; transform: translatex(-50%); font-size: 10em; }
+header .title{font-family: 'Open Sans', sans-serif; font-weight: 700; position: absolute; top: 30%; left: 50%; transform: translatex(-50%); font-size: 10em; }
 .scroll{position: absolute;bottom: 0;left: 50%;transform: translatex(-50%);}
 .scroll a{position: relative;display: block;width: 100px;height: 90px;font-size: 14px;text-align: center; }
 .scroll a::after{position: absolute;display: block; content:''; width: 1px; height: 60px; bottom: 0; left: 50%; background: #232323; animation: move 1s alternate infinite;}
@@ -21,20 +21,21 @@ nav ul li a{color: #fff; letter-spacing: 1px;}
 nav ul li:hover{background: rgba(255,255,255,0.5); font-weight: bold;}
 nav ul li:hover a{color: #000;}
 
+#about{background: url('../image/intro.jpeg') no-repeat fixed; background-size: cover;}
 #about h1{padding: 0 0 30px 0;}
 #about > div{padding: 30px ; box-sizing: border-box;}
 #about > div > div{box-sizing: border-box;}
 #about .resume .txt-wrap{font-weight: 700;}
-#about .resume{background: #f1e4e4; }
+#about .resume{background: rgba(255,255,255,0.9); color: #000;}
 #about .resume .txt-wrap{max-width: 35em; margin-left: auto; margin-right: auto;}
-#about .resume p{line-height: 2; padding: 15px 0; text-align: justify; font-size: 15px;}
-#about .skills{background: #232323; color: #fff;}
+#about .resume p{line-height: 2; padding: 15px 0; text-align: justify; }
+#about .skills{background: rgba(0,0,0,0.7); color: #fff;}
 #about .skills .skill-box{margin: 30px 0; overflow: hidden; }
 #about .skills .skill-box .txt-box{padding-left: 30px; display: inline-block; margin-top: 5px;}
 #about .skills .skill-box:nth-of-type(1) .txt-box{margin-top: 35px; }
 .skill-box .img-box{width: 80px; float: left; padding-right: 30px;}
 .skill-box .img-box img{width: 100%;}
-.skill-box h2{font-style: italic; padding-bottom: 5px; color: #5d5d5d;}
+.skill-box h2{font-style: italic; padding-bottom: 5px; color: #e29898;}
 
 #portfolio {text-align: center;}
 #portfolio img{vertical-align: top;}
@@ -198,7 +199,6 @@ nav ul li:hover a{color: #000;}
 #about h1{padding: 0 0 30px 0;}
 #about > div{padding: 30px ; box-sizing: border-box; height: 100vh;}
 #about > div > div{padding-left: 80px; box-sizing: border-box;}
-#about .resume{background: #f1e4e4;}
 #about .resume .txt-wrap{margin-top: 60px;}
 #about .skills .skill-box{margin: 30px 0; text-align: left;}
 #about .skills .skill-box .txt-box{ display: inline-block; margin-top: 5px;}
