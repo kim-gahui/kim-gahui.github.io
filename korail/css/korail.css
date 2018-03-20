@@ -34,15 +34,9 @@ header.on .lnb-nav::before{height: 300px;}
 .lnb-nav h2 a:hover{border-bottom: 3px solid #4ea6e5;}
 .lnb-nav .wrap > ul > li:nth-of-type(1) h2{text-align: left; background: none; text-indent: 30px;}
 .lnb-nav .wrap > ul > li > div{display: none; position: absolute; width: 100%; top: 40px; left: 0;}
-.lnb-nav .wrap > ul > li:nth-of-type(3) > div,
-.lnb-nav .wrap > ul > li:nth-of-type(4) > div{text-align: center;}
-.lnb-nav .wrap > ul > li:nth-of-type(3) > div li,
-.lnb-nav .wrap > ul > li:nth-of-type(4) > div li{text-align: left;}
-.lnb-nav .wrap > ul > li:nth-of-type(5) > div,
-.lnb-nav .wrap > ul > li:nth-of-type(6) > div{text-align: right;}
-.lnb-nav .wrap > ul > li:nth-of-type(5) > div li,
-.lnb-nav .wrap > ul > li:nth-of-type(6) > div li{text-align: left;}
-.lnb-nav .wrap > ul > li > div ul{display: inline-block; vertical-align: top; width: 16.66%; font-size: 13px; letter-spacing: 1px; padding: 20px 0;}
+.lnb-nav .wrap > ul > li > div ul{float: left; vertical-align: top; width: 16.66%; font-size: 13px; letter-spacing: 1px; padding: 20px; box-sizing: border-box;}
+.lnb-nav .wrap > ul > li:nth-child(5) > div ul,
+.lnb-nav .wrap > ul > li:nth-child(6) > div ul{float: right;}
 .lnb-nav li ul li a{color: #5d5d5d;}
 .lnb-nav li ul li a:hover{color: #017cab;}
 .lnb-title{font-weight: bold; padding-bottom: 15px; }
