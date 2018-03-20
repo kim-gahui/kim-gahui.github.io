@@ -5,7 +5,7 @@ $(function(){
     // boxClass:     'wow',      // default
     // animateClass: 'animated', // default
     offset:       500,          // default
-    // mobile:       true,       // default
+    mobile:       false,       // default
     // live:         true        // default
   }
   )
