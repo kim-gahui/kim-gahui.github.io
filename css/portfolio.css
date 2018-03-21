@@ -1,7 +1,16 @@
 @charset "UTF-8";
 body{word-break: keep-all;}
 header{height: 100vh; position: relative;}
-header .title{font-family: 'Open Sans', sans-serif; font-weight: 700; position: absolute; top: 30%; left: 50%; transform: translatex(-50%); font-size: 10em; }
+header svg{position: absolute; top: 30%; left: 50%; transform: translatex(-50%); font-size: 10em; width: 430px;height: 200px;}
+svg text { fill: #232323; stroke: #232323;fill-opacity: 1;stroke-width: 0;stroke-dasharray: 100% 0;animation: hello 3s ease-out;}
+@keyframes hello {
+  0% {fill-opacity: 0;stroke-width: 0;stroke-dasharray: 0% 100%;}
+  25% {stroke-width: 3px;}
+  50% {fill-opacity: 0;}
+  75% {stroke-width: 3px;}
+  100% {stroke-width: 0;}
+}
+/* header .title{font-family: 'Open Sans', sans-serif; font-weight: 700; position: absolute; top: 30%; left: 50%; transform: translatex(-50%); font-size: 10em; } */
 .scroll{position: absolute;bottom: 0;left: 50%;transform: translatex(-50%);}
 .scroll a{position: relative;display: block;width: 100px;height: 90px;font-size: 14px;text-align: center; }
 .scroll a::after{position: absolute;display: block; content:''; width: 1px; height: 60px; bottom: 0; left: 50%; background: #232323; animation: move 1s alternate infinite;}

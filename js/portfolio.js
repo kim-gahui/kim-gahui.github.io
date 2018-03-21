@@ -11,6 +11,17 @@ $(function(){
   )
   wow.init();
 
+  wow2 = new WOW(
+    {
+    boxClass:     'wow2',      // default
+    // animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       false,       // default
+    // live:         true        // default
+  }
+  )
+  wow2.init();
+
   // 네비게이션 삽입하지 않기로 함. 관련한 스크립트 모두 주석처리.
   $(window).scroll(function(){
     var home=$('#home').offset().top;
